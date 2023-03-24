@@ -1,26 +1,44 @@
-import { Divider, useMediaQuery, useTheme } from "@mui/material";
-import { useMemo } from "react";
-import Logo from "../../assets/Logo.png";
+import { Divider, styled, Theme, Typography,  TypographyProps} from "@mui/material";
+import { css } from "@emotion/css";
+
+
+import LogoComponent from "./logoComponent";
+import { useTheme } from "@emotion/react";
+
+const TypographyTitle = styled(Typography)<TypographyProps>(({ theme }) => ({
+    [theme.breakpoints.up("md")]:{
+        fontSize: 60,
+    },
+    [theme.breakpoints.down("md")]:{
+        fontSize: 45,
+    },
+}));
+
+const TypographySubtitle = styled(Typography)<TypographyProps>(({ theme }) => ({
+    [theme.breakpoints.up("md")]:{
+        fontSize: 45,
+    },
+    [theme.breakpoints.down("md")]:{
+        fontSize: 30,
+    },
+}));
+
 
 export default function Presentation(){
-    const theme = useTheme();
-    const matches = useMediaQuery(theme.breakpoints.up('md'));
-
-    const logoSize = useMemo(()=>{
-        if(matches){
-        return 300
-        }else{
-        return 165
-        }
-    },[matches])
-
-
+    const theme:any = useTheme();
+    const dividerStyle = css`
+        width: 90vw;
+        height: 2px;
+        background-color: ${theme.palette.primary.main};
+        align-self: center;
+    `;
     return (
         <>
-            <img src={Logo} alt="Foto" width={logoSize} height={logoSize}/>
-            <h1>Leonardo Leite Site</h1>
-            <p>Softaware Engineer</p>
-            <Divider variant="middle"/>
-        </>    
+            <LogoComponent/>
+            <TypographyTitle variant="h1">Leonardo Leite</TypographyTitle>
+            <TypographySubtitle variant="h2">Software Engineer</TypographySubtitle>
+            <div className={dividerStyle}/>
+            {/* <Divider variant="middle"/> */}
+        </>     
     )
 }

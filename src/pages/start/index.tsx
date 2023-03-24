@@ -2,13 +2,11 @@ import ContactButton from 'components/contactButton';
 import NavigationLinks from 'components/navigationLinks';
 import Presentation from 'components/presentation';
 import SocialMedias from 'components/socialMedias';
-import './Start.css';
+import appStyle from './start.style';
 
 function Start() {
-  
-
   return (
-    <div className="App">
+    <div className={appStyle}>
       <Presentation/>
       <ContactButton/>
       <NavigationLinks/>

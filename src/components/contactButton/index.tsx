@@ -1,5 +1,7 @@
+import { Button } from "@mui/material";
+
 export default function ContactButton(){
     return (
-        <button>Contato</button>
+        <Button color="primary" variant="contained">Contato</Button>
     )
 }
