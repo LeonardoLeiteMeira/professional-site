@@ -1,13 +1,13 @@
-import { useMediaQuery, useTheme } from "@mui/material";
+import { css, useMediaQuery, useTheme } from "@mui/material";
 import { useMemo } from "react";
-import Logo from "../../../assets/Logo.png";
-import { css } from '@emotion/css';
+import Logo from "../../../../public/Logo.png"
+import styled from '@emotion/styled'
 
-const logoStyle = css`
+const LogoStyle = styled("img")`
     border-radius: 50%;
 `;
 
-const logoContainer = css`
+const LogoContainer = styled("div")`
     padding-top: 50px;
 `;
 
@@ -25,8 +25,8 @@ export default function LogoComponent(){
 
 
     return (
-        <div className={logoContainer}>
-            <img className={logoStyle} src={Logo} alt="Foto" width={logoSize} height={logoSize}/>
-        </div>
+        <LogoContainer>
+            <LogoStyle src={Logo.src} alt="Foto" width={logoSize} height={logoSize}/>
+        </LogoContainer>
     )
 }

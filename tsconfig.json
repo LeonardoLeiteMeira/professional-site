@@ -1,56 +1,23 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
+    "noEmit": true,
+    "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
-    "baseUrl": "src",
+    "jsx": "preserve",
+    "incremental": true,
     "paths": {
       "@/*": ["./src/*"]
-    },
-    "types": [
-      "node",
-      "react",
-      "react-dom",
-      "react-scripts"
-    ],
-    "typeRoots": [
-      "./node_modules/@types",
-      "./src/@types"
-    ]
+    }
   },
-  "include": [
-    "src",
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "public/**/*.png",
-    "public/**/*.html",
-    "public/**/*.ico"
-  ],
-  "exclude": [
-    "node_modules"
-  ],
-  "typeRoots": [
-    "./src/@types"
-  ],
-  "module": "esnext",
-  "moduleResolution": "node",
-  "resolveJsonModule": true,
-  "isolatedModules": true,
-  "noEmit": true
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
 }

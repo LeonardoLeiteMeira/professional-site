@@ -1,6 +1,4 @@
-import { Divider, styled, Theme, Typography,  TypographyProps} from "@mui/material";
-import { css } from "@emotion/css";
-
+import {styled, Typography,  TypographyProps} from "@mui/material";
 
 import LogoComponent from "./logoComponent";
 import { useTheme } from "@emotion/react";
@@ -26,7 +24,7 @@ const TypographySubtitle = styled(Typography)<TypographyProps>(({ theme }) => ({
 
 export default function Presentation(){
     const theme:any = useTheme();
-    const dividerStyle = css`
+    const DividerStyle = styled("div")`
         width: 90vw;
         height: 2px;
         background-color: ${theme.palette.primary.main};
@@ -37,7 +35,7 @@ export default function Presentation(){
             <LogoComponent/>
             <TypographyTitle variant="h1">Leonardo Leite</TypographyTitle>
             <TypographySubtitle variant="h2">Software Engineer</TypographySubtitle>
-            <div className={dividerStyle}/>
+            <DividerStyle/>
             {/* <Divider variant="middle"/> */}
         </>     
     )
