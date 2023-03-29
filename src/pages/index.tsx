@@ -12,7 +12,6 @@ const Main = styled("main")`
   text-align: center;
   width: 100vw;
   height: 100vh;
-  /* padding-top:5vh; */
 `;
 
 export default function Home() {

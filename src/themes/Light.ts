@@ -18,7 +18,10 @@ export const lightTheme = createTheme({
         h2:{
             letterSpacing:"-2%",
             fontFamily:"Text me one", 
-            // fontWeight:"lighter"
         },
+        button:{
+            letterSpacing:"-2%",
+            fontFamily:"Text me one",
+        }
     }
 })

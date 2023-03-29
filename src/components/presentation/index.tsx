@@ -1,7 +1,6 @@
-import {styled, Typography,  TypographyProps} from "@mui/material";
+import {Grid, styled, Typography,  TypographyProps} from "@mui/material";
 
 import LogoComponent from "./logoComponent";
-import { useTheme } from "@emotion/react";
 
 const TypographyTitle = styled(Typography)<TypographyProps>(({ theme }) => ({
     [theme.breakpoints.up("md")]:{
@@ -10,6 +9,8 @@ const TypographyTitle = styled(Typography)<TypographyProps>(({ theme }) => ({
     [theme.breakpoints.down("md")]:{
         fontSize: 45,
     },
+    color:theme.palette.primary.main,
+    "padding-bottom": theme.spacing(2)
 }));
 
 const TypographySubtitle = styled(Typography)<TypographyProps>(({ theme }) => ({
@@ -19,24 +20,27 @@ const TypographySubtitle = styled(Typography)<TypographyProps>(({ theme }) => ({
     [theme.breakpoints.down("md")]:{
         fontSize: 30,
     },
+    color:theme.palette.primary.main,
+    "padding-bottom": theme.spacing(3)
+}));
+
+const Divider = styled("div")(({ theme }) => ({
+    width: "90vw",
+    maxWidth:theme.spacing(40),
+    height: theme.spacing(0.25),
+    backgroundColor: `${theme.palette.secondary.main}`    
 }));
 
 
 export default function Presentation(){
-    const theme:any = useTheme();
-    const DividerStyle = styled("div")`
-        width: 90vw;
-        height: 2px;
-        background-color: ${theme.palette.primary.main};
-        align-self: center;
-    `;
     return (
         <>
-            <LogoComponent/>
-            <TypographyTitle variant="h1">Leonardo Leite</TypographyTitle>
-            <TypographySubtitle variant="h2">Software Engineer</TypographySubtitle>
-            <DividerStyle/>
-            {/* <Divider variant="middle"/> */}
+            <Grid container flexDirection={"column"} alignItems="center">
+                <LogoComponent/>
+                <TypographyTitle variant="h1">Leonardo Leite</TypographyTitle>
+                <TypographySubtitle variant="h2">Software Engineer</TypographySubtitle>
+                <Divider/>
+            </Grid>
         </>     
     )
 }
