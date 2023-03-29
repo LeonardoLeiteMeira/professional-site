@@ -1,5 +1,5 @@
 import { styled } from "@mui/material";
-import Logo from "../../../../public/Logo.png"
+import Logo from "../../../assets/images/Logo.png"
 import Image, { ImageProps } from 'next/image'
 
 const LogoStyle = styled(Image)<ImageProps>(({theme})=>({
@@ -13,8 +13,8 @@ const LogoStyle = styled(Image)<ImageProps>(({theme})=>({
 }))
 
 const LogoContainer = styled("div")(({theme})=>({
-    "padding-top": theme.spacing(6),
-    "padding-bottom": theme.spacing(2)
+    "paddingTop": theme.spacing(6),
+    "paddingBottom": theme.spacing(2)
 }));
 
 export default function LogoComponent(){

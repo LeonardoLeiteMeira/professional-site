@@ -14,14 +14,14 @@ body {
 
 @font-face {
   font-family: 'Text me one';
-  src: url('../fonts/TextMeOne-Regular.ttf') format('truetype');
+  src: url('../assets/fonts/TextMeOne-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Montserrat Extra Light';
-  src: url('../fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+  src: url('../assets/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
   font-weight: lighter;
   font-style: normal;
 }

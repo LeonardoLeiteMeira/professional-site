@@ -10,7 +10,7 @@ const TypographyTitle = styled(Typography)<TypographyProps>(({ theme }) => ({
         fontSize: 45,
     },
     color:theme.palette.primary.main,
-    "padding-bottom": theme.spacing(2)
+    "paddingBottom": theme.spacing(2)
 }));
 
 const TypographySubtitle = styled(Typography)<TypographyProps>(({ theme }) => ({
@@ -21,7 +21,7 @@ const TypographySubtitle = styled(Typography)<TypographyProps>(({ theme }) => ({
         fontSize: 30,
     },
     color:theme.palette.primary.main,
-    "padding-bottom": theme.spacing(3)
+    "paddingBottom": theme.spacing(3)
 }));
 
 const Divider = styled("div")(({ theme }) => ({
