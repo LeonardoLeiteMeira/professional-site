@@ -1,10 +1,16 @@
-import { styled, useMediaQuery, useTheme } from "@mui/material";
-import { useMemo } from "react";
+import { styled } from "@mui/material";
 import Logo from "../../../../public/Logo.png"
+import Image, { ImageProps } from 'next/image'
 
-const LogoStyle = styled("img")`
-    border-radius: 50%;
-`;
+const LogoStyle = styled(Image)<ImageProps>(({theme})=>({
+    borderRadius: "50%",
+    width: 165,
+    height: 165,
+    [theme.breakpoints.up("md")]:{
+        width: 300,
+        height: 300,
+    },
+}))
 
 const LogoContainer = styled("div")(({theme})=>({
     "padding-top": theme.spacing(6),
@@ -12,21 +18,9 @@ const LogoContainer = styled("div")(({theme})=>({
 }));
 
 export default function LogoComponent(){
-    const theme = useTheme();
-    const matches = useMediaQuery(theme.breakpoints.up('md'));
-
-    const logoSize = useMemo(()=>{
-        if(matches){
-            return 300
-        }else{
-            return 165
-        }
-    },[matches])
-
-
     return (
         <LogoContainer>
-            <LogoStyle src={Logo.src} alt="Foto" width={logoSize} height={logoSize}/>
+            <LogoStyle src={Logo} alt="Foto" />
         </LogoContainer>
     )
 }
