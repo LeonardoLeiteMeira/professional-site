@@ -22,6 +22,11 @@ export const lightTheme = createTheme({
         button:{
             letterSpacing:"-2%",
             fontFamily:"Text me one",
+        },
+        h3:{
+            fontFamily:"Montserrat Extra Light",
+            letterSpacing:"-2%",
+            fontWeight:"lighter"
         }
     }
 })

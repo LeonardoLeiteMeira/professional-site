@@ -22,7 +22,7 @@ body {
 @font-face {
   font-family: 'Montserrat Extra Light';
   src: url('../fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
-  font-weight: extraLight;
+  font-weight: lighter;
   font-style: normal;
 }
 
