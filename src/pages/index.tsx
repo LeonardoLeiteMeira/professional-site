@@ -4,6 +4,7 @@ import ContactButton from '@/components/contactButton'
 import NavigationLinks from '@/components/navigationLinks'
 import SocialMedias from '@/components/socialMedias'
 import styled from '@emotion/styled'
+import { Grid } from '@mui/material'
 
 const Main = styled("main")`
   overflow: hidden;
@@ -25,11 +26,19 @@ export default function Home() {
         
       </Head>
       <Main>
-        <Presentation/>
-        <ContactButton/>
-        <NavigationLinks/>
+        <Grid display="flex" flexDirection="column" gap={2}>
+          <Grid item>
+            <Presentation/>
+            <ContactButton/>
+          </Grid>
 
-        <SocialMedias/>
+          <Grid item display="flex" flexDirection="column" alignItems={'center'} gap={8}>
+            <NavigationLinks/>
+            <Grid item>
+              <SocialMedias/>
+            </Grid>
+          </Grid>
+        </Grid>
       </Main>
     </>
   )
