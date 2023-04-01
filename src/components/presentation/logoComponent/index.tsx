@@ -13,7 +13,7 @@ const LogoStyle = styled(Image)<ImageProps>(({theme})=>({
 }))
 
 const LogoContainer = styled("div")(({theme})=>({
-    "paddingTop": theme.spacing(6),
+    "paddingTop": theme.spacing(2),
     "paddingBottom": theme.spacing(2)
 }));
 

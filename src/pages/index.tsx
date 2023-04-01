@@ -4,7 +4,8 @@ import ContactButton from '@/components/contactButton'
 import NavigationLinks from '@/components/navigationLinks'
 import SocialMedias from '@/components/socialMedias'
 import styled from '@emotion/styled'
-import { Grid } from '@mui/material'
+import { Box, Grid, Switch } from '@mui/material'
+import SwitchLanguage from '@/components/switchLanguage'
 
 const Main = styled("main")`
   overflow: hidden;
@@ -28,10 +29,12 @@ export default function Home() {
       <Main>
         <Grid display="flex" flexDirection="column" gap={2}>
           <Grid item>
+            <Box width={"100vw"}>
+              <SwitchLanguage onChange={(language)=>console.log(language)} selectedLanguage='Portuguese'/>
+            </Box>
             <Presentation/>
             <ContactButton/>
           </Grid>
-
           <Grid item display="flex" flexDirection="column" alignItems={'center'} gap={8}>
             <NavigationLinks/>
             <Grid item>
