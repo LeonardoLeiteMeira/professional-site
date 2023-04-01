@@ -4,8 +4,8 @@ import Image, { ImageProps } from 'next/image'
 
 const LogoStyle = styled(Image)<ImageProps>(({theme})=>({
     borderRadius: "50%",
-    width: 165,
-    height: 165,
+    width: 130,
+    height: 130,
     [theme.breakpoints.up("md")]:{
         width: 300,
         height: 300,

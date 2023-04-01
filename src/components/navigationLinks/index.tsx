@@ -2,8 +2,8 @@ import { Typography, styled } from "@mui/material";
 import { TypographyProps } from "@mui/system";
 
 const LinkStyled = styled(Typography)<TypographyProps>(({theme})=>({
-  fontSize:28,
-  padding:theme.spacing(2)
+  fontSize:26,
+  padding:theme.spacing(1)
 }))
 
 export default function NavigationLinks(){

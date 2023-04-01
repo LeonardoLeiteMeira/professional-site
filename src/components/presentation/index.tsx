@@ -7,10 +7,9 @@ const TypographyTitle = styled(Typography)<TypographyProps>(({ theme }) => ({
         fontSize: 60,
     },
     [theme.breakpoints.down("md")]:{
-        fontSize: 45,
+        fontSize: 40,
     },
     color:theme.palette.primary.main,
-    "paddingBottom": theme.spacing(2)
 }));
 
 const TypographySubtitle = styled(Typography)<TypographyProps>(({ theme }) => ({
@@ -18,17 +17,9 @@ const TypographySubtitle = styled(Typography)<TypographyProps>(({ theme }) => ({
         fontSize: 45,
     },
     [theme.breakpoints.down("md")]:{
-        fontSize: 30,
+        fontSize: 28,
     },
     color:theme.palette.primary.main,
-    "paddingBottom": theme.spacing(3)
-}));
-
-const Divider = styled("div")(({ theme }) => ({
-    width: "90vw",
-    maxWidth:theme.spacing(40),
-    height: theme.spacing(0.25),
-    backgroundColor: `${theme.palette.secondary.main}`    
 }));
 
 
@@ -39,7 +30,6 @@ export default function Presentation(){
                 <LogoComponent/>
                 <TypographyTitle variant="h1">Leonardo Leite</TypographyTitle>
                 <TypographySubtitle variant="h2">Software Engineer</TypographySubtitle>
-                <Divider/>
             </Grid>
         </>     
     )

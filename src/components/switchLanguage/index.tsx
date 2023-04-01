@@ -48,21 +48,20 @@ export default function SwitchLanguage({selectedLanguage,onChange}:Props){
     }
 
     return (
-        <Box width={"100vw"} display="flex" justifyContent="flex-end">
-            <Grid display={"flex"} flexDirection={"row"} alignItems="center">
-                <Flag
-                    variant={isEnglish?"h6":"h4"}
-                >
-                    🏴󠁧󠁢󠁥󠁮󠁧󠁿
-                </Flag> 
-                <StyledSwitch value={isEnglish} onChange={handleChange} size="medium"/>
-                <Flag
-                    variant={isEnglish?"h4":"h6"}
-                >
-                    🇵🇹
-                </Flag>
-            </Grid>
-        </Box>
-            
+      <Box width={"100vw"} display="flex" justifyContent="flex-end">
+        <Grid display={"flex"} flexDirection={"row"} alignItems="center">
+          <Flag
+            variant={isEnglish?"h6":"h4"}
+          >
+            🏴󠁧󠁢󠁥󠁮󠁧󠁿
+          </Flag> 
+          <StyledSwitch value={isEnglish} onChange={handleChange} size="medium"/>
+          <Flag
+            variant={isEnglish?"h4":"h6"}
+          >
+            🇵🇹
+          </Flag>
+        </Grid>
+      </Box>
     )
 }

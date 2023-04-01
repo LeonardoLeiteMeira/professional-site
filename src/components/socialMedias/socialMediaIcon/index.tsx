@@ -41,7 +41,7 @@ export default function SocialMediaIcon({socialMedia}:Props){
     }
 
     const [icon, setIcon] = useState(getInitialIcon())
-    const logoSize = 60;
+    const logoSize = 45;
 
     return (
         <Image 

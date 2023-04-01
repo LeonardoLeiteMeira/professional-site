@@ -3,8 +3,7 @@ import Presentation from '@/components/presentation'
 import ContactButton from '@/components/contactButton'
 import NavigationLinks from '@/components/navigationLinks'
 import SocialMedias from '@/components/socialMedias'
-import styled from '@emotion/styled'
-import { Box, Grid, Switch } from '@mui/material'
+import { Box, Grid, styled,useTheme } from '@mui/material'
 import SwitchLanguage from '@/components/switchLanguage'
 
 const Main = styled("main")`
@@ -16,7 +15,15 @@ const Main = styled("main")`
   height: 100vh;
 `;
 
+const Divider = styled("div")(({ theme }) => ({
+    width: "90vw",
+    maxWidth:theme.spacing(40),
+    height: theme.spacing(0.25),
+    backgroundColor: `${theme.palette.secondary.main}`    
+}));
+
 export default function Home() {
+  const theme = useTheme()
   return (
     <>
       <Head>
@@ -27,20 +34,30 @@ export default function Home() {
         
       </Head>
       <Main>
-        <Grid display="flex" flexDirection="column" gap={2}>
+        <Grid display="flex" height={"100vh"} flexDirection="column" justifyContent="space-around">
           <Grid item>
             <Box width={"100vw"}>
               <SwitchLanguage onChange={(language)=>console.log(language)} selectedLanguage='Portuguese'/>
             </Box>
             <Presentation/>
+          </Grid>
+
+          <Grid item display="flex" flexDirection="column" alignItems={'center'}>
+            <Divider/>
+          </Grid>
+
+          <Grid item>
             <ContactButton/>
           </Grid>
+
           <Grid item display="flex" flexDirection="column" alignItems={'center'} gap={8}>
             <NavigationLinks/>
-            <Grid item>
-              <SocialMedias/>
-            </Grid>
           </Grid>
+
+          <Grid item display="flex" flexDirection="column" alignItems={'center'}>
+            <SocialMedias/>
+          </Grid>
+
         </Grid>
       </Main>
     </>
