@@ -1,10 +1,8 @@
 import Head from 'next/head'
-import Presentation from '@/components/presentation'
-import ContactButton from '@/components/contactButton'
-import NavigationLinks from '@/components/navigationLinks'
-import SocialMedias from '@/components/socialMedias'
-import { Box, Grid, styled,useTheme } from '@mui/material'
-import SwitchLanguage from '@/components/switchLanguage'
+import { styled,useMediaQuery } from '@mui/material'
+import IndexMobile from '@/layouts/index/mobile'
+import IndextDesktop from '@/layouts/index/desktop'
+import { Theme } from '@mui/system'
 
 const Main = styled("main")`
   overflow: hidden;
@@ -15,15 +13,11 @@ const Main = styled("main")`
   height: 100vh;
 `;
 
-const Divider = styled("div")(({ theme }) => ({
-    width: "90vw",
-    maxWidth:theme.spacing(40),
-    height: theme.spacing(0.25),
-    backgroundColor: `${theme.palette.secondary.main}`    
-}));
+
 
 export default function Home() {
-  const theme = useTheme()
+  const isDesktop = useMediaQuery((theme:Theme) => theme.breakpoints.up('md'));
+
   return (
     <>
       <Head>
@@ -31,41 +25,9 @@ export default function Home() {
         <meta name="description" content="Professional Site" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        
       </Head>
       <Main>
-        <Grid display="flex" height={"100vh"} flexDirection="column" justifyContent="space-around">
-          <Grid item>
-            <Box width={"100vw"}>
-              <SwitchLanguage onChange={(language)=>console.log(language)} selectedLanguage='Portuguese'/>
-            </Box>
-          </Grid>
-
-          <Grid item container flexDirection={"column"} justifyContent={"center"} gap={5}>
-            <Grid item>
-              <Presentation/>
-            </Grid>
-
-            <Grid item display="flex" justifyContent={'center'}>
-              <Divider/>
-            </Grid>
-
-            <Grid item>
-              <ContactButton/>
-            </Grid>
-          </Grid>
-          
-          <Grid item container flexDirection="column" gap={5}>
-            <Grid item display="flex" justifyContent={'center'}>
-              <NavigationLinks/>
-            </Grid>
-
-            <Grid item display="flex" justifyContent={'center'}>
-              <SocialMedias/>
-            </Grid>
-            
-          </Grid>
-        </Grid>
+        {isDesktop?<IndextDesktop/>:<IndexMobile/>}
       </Main>
     </>
   )
