@@ -21,7 +21,7 @@ const ButtonTypographyStyle = styled(Typography)<TypographyProps>(({theme})=>({
 
 export default function ContactButton(){
     return (
-        <ButtonStyle color="primary" variant="contained">
+        <ButtonStyle color="primary" variant="contained" href="/contact">
              <ButtonTypographyStyle variant="button">Contato</ButtonTypographyStyle>            
         </ButtonStyle>
     )
