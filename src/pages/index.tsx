@@ -39,25 +39,32 @@ export default function Home() {
             <Box width={"100vw"}>
               <SwitchLanguage onChange={(language)=>console.log(language)} selectedLanguage='Portuguese'/>
             </Box>
-            <Presentation/>
           </Grid>
 
-          <Grid item display="flex" flexDirection="column" alignItems={'center'}>
-            <Divider/>
-          </Grid>
+          <Grid item container flexDirection={"column"} justifyContent={"center"} gap={5}>
+            <Grid item>
+              <Presentation/>
+            </Grid>
 
-          <Grid item>
-            <ContactButton/>
-          </Grid>
+            <Grid item display="flex" justifyContent={'center'}>
+              <Divider/>
+            </Grid>
 
-          <Grid item display="flex" flexDirection="column" alignItems={'center'} gap={8}>
-            <NavigationLinks/>
+            <Grid item>
+              <ContactButton/>
+            </Grid>
           </Grid>
+          
+          <Grid item container flexDirection="column" gap={5}>
+            <Grid item display="flex" justifyContent={'center'}>
+              <NavigationLinks/>
+            </Grid>
 
-          <Grid item display="flex" flexDirection="column" alignItems={'center'}>
-            <SocialMedias/>
+            <Grid item display="flex" justifyContent={'center'}>
+              <SocialMedias/>
+            </Grid>
+            
           </Grid>
-
         </Grid>
       </Main>
     </>
