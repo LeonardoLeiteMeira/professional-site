@@ -1,6 +1,7 @@
 import { Typography, styled, useMediaQuery, Theme, Grid } from "@mui/material";
 import { TypographyProps } from "@mui/system";
 import Link, { LinkProps } from "next/link";
+import { useTranslation } from "next-i18next";
 
 const LinkStyled = styled(Link)<LinkProps>(()=>({
   textDecoration: "none",
@@ -23,19 +24,20 @@ const LinkText = styled(Typography)<TypographyProps>(({theme})=>({
 
 export default function NavigationLinks(){
   const isDesktop = useMediaQuery((theme:Theme) => theme.breakpoints.up('md'));
+  const { t } = useTranslation()
   
     return (
     <Grid item container display={"flex"} flexDirection="column" alignItems={isDesktop?"end":"center"} gap={isDesktop?8:0}>
-        <LinkStyled href={"/about"}>
-          <LinkText variant="h3">Sobre mim</LinkText>
+        <LinkStyled href={"/works"}>
+          <LinkText variant="h3">{t("Work Experience")}</LinkText>
         </LinkStyled>
         
         <LinkStyled href={"/workMethodology"}>
-          <LinkText variant="h3">Como Trabalho</LinkText>
+          <LinkText variant="h3">{t("Work Methodoly")}</LinkText>
         </LinkStyled>
-        
-        <LinkStyled href={"/works"}>
-          <LinkText variant="h3">Trabalhos realizados</LinkText>
+
+        <LinkStyled href={"/about"}>
+          <LinkText variant="h3">{t("About")}</LinkText>
         </LinkStyled>
       </Grid>   
     )
