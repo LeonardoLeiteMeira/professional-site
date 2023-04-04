@@ -21,8 +21,8 @@ export default function SwitchLanguage({isNavbar = false}:Props){
     return newState
   }
   
-  const {locales, push, asPath} = useRouter()
-  const [isEnglish, isEnglishDispatch] = useReducer(languageReducer, {value:true})
+  const {locale ,locales, push, asPath} = useRouter()
+  const [isEnglish, isEnglishDispatch] = useReducer(languageReducer, {value:locale==="en"})
 
   return (
     <Box width={isNavbar?"auto":"100vw"} display="flex" justifyContent="flex-end">
