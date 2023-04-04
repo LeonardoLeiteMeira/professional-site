@@ -7,6 +7,7 @@ const DividerStyled = styled("div")(({ theme }) => ({
     backgroundColor: `${theme.palette.secondary.main}`,
     [theme.breakpoints.up("md")]:{
         height: theme.spacing(1),
+        borderRadius:"20px"
     }
 }));
 
