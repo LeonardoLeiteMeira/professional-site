@@ -7,9 +7,13 @@ import StyledSwitch from "./StyledSwitch";
 interface State {
   value: boolean;
 }  
+
+type Props = {
+  isNavbar?:boolean
+}
   
-export default function SwitchLanguage(){
-  function languageEeducer(state:State):State {
+export default function SwitchLanguage({isNavbar = false}:Props){
+  function languageReducer(state:State):State {
     let newState = {value:!state.value}
     console.log("path",asPath)
     console.log("isEnglish",newState)
@@ -18,10 +22,10 @@ export default function SwitchLanguage(){
   }
   
   const {locales, push, asPath} = useRouter()
-  const [isEnglish, isEnglishDispatch] = useReducer(languageEeducer, {value:true})
+  const [isEnglish, isEnglishDispatch] = useReducer(languageReducer, {value:true})
 
   return (
-    <Box width={"100vw"} display="flex" justifyContent="flex-end">
+    <Box width={isNavbar?"auto":"100vw"} display="flex" justifyContent="flex-end">
       <Grid display={"flex"} flexDirection={"row"} alignItems="center">
         <Flag            
           variant={isEnglish.value?"h4":"h6"}
