@@ -1,73 +1,40 @@
 import { Box, Grid, styled, Switch, Typography } from "@mui/material";
-import { useState } from "react";
 import { useRouter } from "next/router"
+import React, { useReducer } from 'react';
+import Flag from "./Flag";
+import StyledSwitch from "./StyledSwitch";
 
-const StyledSwitch = styled(Switch)(({ theme }) => ({
-  minWidth:theme.spacing(4),
-  height: 34,
-  padding: 7,
-  '& .MuiSwitch-switchBase': {
-    padding: 0,
-    '&.Mui-checked': {
-      '& + .MuiSwitch-track': {
-        opacity: 1,
-        backgroundColor: '#aab4be',
-      },
-    },
-  },
-  '& .MuiSwitch-thumb': {
-    backgroundColor: theme.palette.primary.main,
-    width: 32,
-    height: 32,
-  },
-  '& .MuiSwitch-track': {
-    opacity: 1,
-    backgroundColor:'#aab4be',
-    borderRadius: 10,
-  },
-}));
-
-const Flag = styled(Typography)(({theme})=>({
-    minWidth:theme.spacing(4),
-    marginRight:theme.spacing(1),
-    marginLeftt:theme.spacing(1),
-}))
-
+interface State {
+  value: boolean;
+}  
+  
 export default function SwitchLanguage(){
-    const {locale, locales, push} = useRouter()
-    const [isEnglish, setIsEnglish] = useState<boolean>(locale==="en")
+  function languageEeducer(state:State):State {
+    let newState = {value:!state.value}
+    push("/",undefined,{locale: newState.value?locales![0]:locales![1]})
+    return newState
+  }
+  
+  const {locales, push} = useRouter()
+  const [isEnglish, isEnglishDispatch] = useReducer(languageEeducer, {value:true})
 
-    // const useReducer = 
+  return (
+    <Box width={"100vw"} display="flex" justifyContent="flex-end">
+      <Grid display={"flex"} flexDirection={"row"} alignItems="center">
+        <Flag            
+          variant={isEnglish?"h4":"h6"}
+        >
+          🏴󠁧󠁢󠁥󠁮󠁧󠁿 
+        </Flag> 
 
-    // const reducer = (state, action)=>{
-      
-    // }
+        <StyledSwitch checked={!isEnglish} onChange={isEnglishDispatch} size="medium"/>
 
-    const handleChange = ()=>{
-      setIsEnglish(oldValue=>{
-        let newValue = !oldValue
-        push("/",undefined,{locale:newValue?locales![0]:locales![1]})
-        return newValue
-      })
-    }
-
-    return (
-      <Box width={"100vw"} display="flex" justifyContent="flex-end">
-        <Grid display={"flex"} flexDirection={"row"} alignItems="center">
-          <Flag            
-            variant={isEnglish?"h4":"h6"}
-          >
-            🏴󠁧󠁢󠁥󠁮󠁧󠁿 
-          </Flag> 
-
-          <StyledSwitch checked={!isEnglish} onChange={handleChange} size="medium"/>
-
-          <Flag
-            variant={isEnglish?"h6":"h4"}
-          >
-            🇵🇹
-          </Flag>
-        </Grid>
-      </Box>
-    )
+        <Flag
+          variant={isEnglish?"h6":"h4"}
+        >
+          🇵🇹
+        </Flag>
+      </Grid>
+    </Box>
+  )
 }
