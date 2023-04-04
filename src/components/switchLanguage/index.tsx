@@ -22,15 +22,15 @@ export default function SwitchLanguage(){
     <Box width={"100vw"} display="flex" justifyContent="flex-end">
       <Grid display={"flex"} flexDirection={"row"} alignItems="center">
         <Flag            
-          variant={isEnglish?"h4":"h6"}
+          variant={isEnglish.value?"h4":"h6"}
         >
           🏴󠁧󠁢󠁥󠁮󠁧󠁿 
         </Flag> 
 
-        <StyledSwitch checked={!isEnglish} onChange={isEnglishDispatch} size="medium"/>
+        <StyledSwitch checked={!isEnglish.value} onChange={isEnglishDispatch} size="medium"/>
 
         <Flag
-          variant={isEnglish?"h6":"h4"}
+          variant={isEnglish.value?"h6":"h4"}
         >
           🇵🇹
         </Flag>
