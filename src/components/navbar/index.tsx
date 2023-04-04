@@ -1,11 +1,12 @@
 import { Grid, GridProps, styled, Typography, TypographyProps, useTheme } from "@mui/material";
+import { useTranslation } from "next-i18next";
 import ContactButton from "../contactButton";
 import SocialMedias from "../socialMedias";
 import SwitchLanguage from "../switchLanguage";
 
 
 const NavBarStyle = styled(Grid)<GridProps>(({theme})=>({
-    color: "#FAF8F6"
+    backgroundColor: "#FAF8F6"
 }))
 
 const NavbarText = styled(Typography)<TypographyProps>(({theme})=>({
@@ -14,12 +15,13 @@ const NavbarText = styled(Typography)<TypographyProps>(({theme})=>({
 
 export default function Navbar(){
     const theme = useTheme()
+    const { t } = useTranslation()
     return (
         <NavBarStyle container flexDirection={"row"} justifyContent="space-around" width={"100vw"} alignItems="center" height={theme.spacing(8)}>
-            <NavbarText>Inicio</NavbarText>
-            <NavbarText>Sobre min</NavbarText>
-            <NavbarText>Como Trabalho</NavbarText>
-            <NavbarText>Trabalhos realizados</NavbarText>
+            <NavbarText>{t("Start")}</NavbarText>
+            <NavbarText>{t("About")}</NavbarText>
+            <NavbarText>{t("Work Methodoly")}</NavbarText>
+            <NavbarText>{t("Work Experience")}</NavbarText>
             <SocialMedias
                 size="small"
             />
