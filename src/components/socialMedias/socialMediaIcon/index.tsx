@@ -11,9 +11,10 @@ import Link from "next/link"
 
 type Props = {
     socialMedia:"Linkedin"|"GitHub"|"Instagram"
+    iconSize:30|45
 }
 
-export default function SocialMediaIcon({socialMedia}:Props){
+export default function SocialMediaIcon({socialMedia, iconSize}:Props){
     const getInitialIcon = ()=>{
         switch (socialMedia) {
             case "Linkedin":
@@ -55,7 +56,7 @@ export default function SocialMediaIcon({socialMedia}:Props){
     }
 
     const [icon, setIcon] = useState(getInitialIcon())
-    const logoSize = 45;
+    const logoSize = iconSize;
 
     return (
         <Link href={getLink()}>

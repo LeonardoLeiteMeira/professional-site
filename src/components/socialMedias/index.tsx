@@ -1,20 +1,28 @@
 import { useTheme } from '@mui/material/styles';
-import { Grid, Theme, useMediaQuery } from "@mui/material";
+import { Grid, Theme } from "@mui/material";
 import SocialMediaIcon from "./socialMediaIcon";
 
-export default function SocialMedias(){
+type Props = {
+    size?:"small"|"large"
+}
+
+export default function SocialMedias({size}:Props){
     const theme:Theme = useTheme()
-    const isDesktop = useMediaQuery((theme:Theme) => theme.breakpoints.up('md'));
+    const iconSize = size==="small"?30:45
+    const spacing = size==="small"?20:40
     return(
-        <Grid container flexDirection="row" justifyContent="space-around" width={theme.spacing(40)} marginBottom={isDesktop?theme.spacing(4):0}>
+        <Grid container flexDirection="row" justifyContent="space-around" width={theme.spacing(spacing)}>
             <SocialMediaIcon
                 socialMedia="GitHub"
+                iconSize={iconSize}
             />
             <SocialMediaIcon
                 socialMedia="Linkedin"
+                iconSize={iconSize}
             />
             <SocialMediaIcon
                 socialMedia="Instagram"
+                iconSize={iconSize}
             /> 
         </Grid>
     )
