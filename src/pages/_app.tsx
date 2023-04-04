@@ -2,8 +2,9 @@ import '@/styles/globals.css'
 import { lightTheme } from '@/themes/Light';
 import { ThemeProvider } from '@mui/material';
 import type { AppProps } from 'next/app'
+import { appWithTranslation } from 'next-i18next';
 
-export default function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   return (
     <main >
       <ThemeProvider theme={lightTheme}>
@@ -14,3 +15,4 @@ export default function App({ Component, pageProps }: AppProps) {
 }
 
 
+export default appWithTranslation(App)

@@ -1,6 +1,6 @@
-import {Grid, styled, Typography,  TypographyProps} from "@mui/material";
-
+import { Grid, styled, Typography,  TypographyProps } from "@mui/material";
 import LogoComponent from "./logoComponent";
+import { useTranslation } from 'next-i18next'
 
 const TypographyTitle = styled(Typography)<TypographyProps>(({ theme }) => ({
     [theme.breakpoints.up("md")]:{
@@ -23,14 +23,14 @@ const TypographySubtitle = styled(Typography)<TypographyProps>(({ theme }) => ({
 }));
 
 
+
 export default function Presentation(){
+    const {t} = useTranslation("common")
     return (
-        <>
-            <Grid container flexDirection={"column"} alignItems="center">
-                <LogoComponent/>
-                <TypographyTitle variant="h1">Leonardo Leite</TypographyTitle>
-                <TypographySubtitle variant="h2">Software Engineer</TypographySubtitle>
-            </Grid>
-        </>     
+        <Grid container flexDirection={"column"} alignItems="center">
+            <LogoComponent/>
+            <TypographyTitle variant="h1">Leonardo Leite</TypographyTitle>
+            <TypographySubtitle variant="h2">{t("Software Engineer")}</TypographySubtitle>
+        </Grid>    
     )
 }

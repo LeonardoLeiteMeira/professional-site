@@ -3,6 +3,8 @@ import { styled,useMediaQuery } from '@mui/material'
 import IndexMobile from '@/layouts/index/mobile'
 import IndextDesktop from '@/layouts/index/desktop'
 import { Theme } from '@mui/system'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { GetStaticProps } from "next";
 
 const Main = styled("main")`
   overflow: hidden;
@@ -17,7 +19,6 @@ const Main = styled("main")`
 
 export default function Home() {
   const isDesktop = useMediaQuery((theme:Theme) => theme.breakpoints.up('md'));
-
   return (
     <>
       <Head>
@@ -32,3 +33,9 @@ export default function Home() {
     </>
   )
 }
+
+export const getStaticProps: GetStaticProps = async ({locale}) => ({
+  props: {
+    ...(await serverSideTranslations(locale ?? 'en', ['common'])),
+  },
+})

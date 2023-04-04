@@ -6,6 +6,7 @@ import SocialMedias from "@/components/socialMedias";
 import SwitchLanguage from "@/components/switchLanguage";
 import { Grid } from "@mui/material";
 
+
 export default function IndextDesktop(){
     return (
     <Grid container flexDirection={"row"} width={"100vw"} height={"100vh"}>
@@ -17,7 +18,7 @@ export default function IndextDesktop(){
 
 
         <Grid item container  height={"100vh"} width={"50vw"} alignContent={"space-between"} justifyContent={"end"}>
-            <SwitchLanguage onChange={(language)=>console.log(language)} selectedLanguage='Portuguese'/>
+            <SwitchLanguage/>
             <NavigationLinks/>
             <SocialMedias/>
         </Grid>

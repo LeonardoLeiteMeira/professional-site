@@ -6,12 +6,13 @@ import SocialMedias from "@/components/socialMedias";
 import SwitchLanguage from "@/components/switchLanguage";
 import { Box, Grid } from "@mui/material";
 
+
 export default function IndexMobile(){
     return (
          <Grid display="flex" height={"100vh"} flexDirection="column" justifyContent="space-around">
           <Grid item>
             <Box width={"100vw"}>
-              <SwitchLanguage onChange={(language)=>console.log(language)} selectedLanguage='Portuguese'/>
+              <SwitchLanguage/>
             </Box>
           </Grid>
           <Grid item container flexDirection={"column"} justifyContent={"center"} gap={5}>

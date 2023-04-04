@@ -1,5 +1,6 @@
 import { Button, Typography, styled, ButtonProps, useTheme, useMediaQuery, Theme } from "@mui/material";
 import { TypographyProps } from "@mui/system";
+import { useTranslation } from "next-i18next";
 
 const ButtonStyle = styled(Button)<ButtonProps>(({theme})=>({
     width:"90vw",
@@ -19,10 +20,12 @@ const ButtonTypographyStyle = styled(Typography)<TypographyProps>(({theme})=>({
     }
 }))
 
+
 export default function ContactButton(){
+    const {t} = useTranslation()
     return (
         <ButtonStyle color="primary" variant="contained" href="/contact">
-             <ButtonTypographyStyle variant="button">Contato</ButtonTypographyStyle>            
+             <ButtonTypographyStyle variant="button">{(t("Contact"))}</ButtonTypographyStyle>            
         </ButtonStyle>
     )
 }

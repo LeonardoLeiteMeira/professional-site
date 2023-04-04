@@ -1,5 +1,6 @@
-import { Box, Grid, styled, Switch, Typography, useTheme } from "@mui/material";
+import { Box, Grid, styled, Switch, Typography } from "@mui/material";
 import { useState } from "react";
+import { useRouter } from "next/router"
 
 const StyledSwitch = styled(Switch)(({ theme }) => ({
   minWidth:theme.spacing(4),
@@ -32,32 +33,37 @@ const Flag = styled(Typography)(({theme})=>({
     marginLeftt:theme.spacing(1),
 }))
 
-type OnChange = (language:"English"|"Portuguese")=>void
+export default function SwitchLanguage(){
+    const {locale, locales, push} = useRouter()
+    const [isEnglish, setIsEnglish] = useState<boolean>(locale==="en")
 
-type Props = {
-    selectedLanguage:"English"|"Portuguese"
-    onChange:OnChange
-}
+    // const useReducer = 
 
-export default function SwitchLanguage({selectedLanguage,onChange}:Props){
-    const [isEnglish, setIsEnglish] = useState<boolean>(selectedLanguage==="English")
-    
+    // const reducer = (state, action)=>{
+      
+    // }
+
     const handleChange = ()=>{
-      onChange(isEnglish?"English":"Portuguese")
-      setIsEnglish(value=>!value)
+      setIsEnglish(oldValue=>{
+        let newValue = !oldValue
+        push("/",undefined,{locale:newValue?locales![0]:locales![1]})
+        return newValue
+      })
     }
 
     return (
       <Box width={"100vw"} display="flex" justifyContent="flex-end">
         <Grid display={"flex"} flexDirection={"row"} alignItems="center">
+          <Flag            
+            variant={isEnglish?"h4":"h6"}
+          >
+            🏴󠁧󠁢󠁥󠁮󠁧󠁿 
+          </Flag> 
+
+          <StyledSwitch checked={!isEnglish} onChange={handleChange} size="medium"/>
+
           <Flag
             variant={isEnglish?"h6":"h4"}
-          >
-            🏴󠁧󠁢󠁥󠁮󠁧󠁿
-          </Flag> 
-          <StyledSwitch value={isEnglish} onChange={handleChange} size="medium"/>
-          <Flag
-            variant={isEnglish?"h4":"h6"}
           >
             🇵🇹
           </Flag>
