@@ -22,12 +22,8 @@ export default function Navbar(){
             <NavbarText>{t("About")}</NavbarText>
             <NavbarText>{t("Work Methodoly")}</NavbarText>
             <NavbarText>{t("Work Experience")}</NavbarText>
-            <SocialMedias
-                size="small"
-            />
-            <ContactButton
-                size="small"
-            />
+            <SocialMedias size="small"/>
+            <ContactButton size="small"/>
             <SwitchLanguage isNavbar={true}/>
         </NavBarStyle>
     )
