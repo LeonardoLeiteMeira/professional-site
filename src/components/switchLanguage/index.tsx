@@ -11,11 +11,13 @@ interface State {
 export default function SwitchLanguage(){
   function languageEeducer(state:State):State {
     let newState = {value:!state.value}
-    push("/",undefined,{locale: newState.value?locales![0]:locales![1]})
+    console.log("path",asPath)
+    console.log("isEnglish",newState)
+    push(`${asPath}`,undefined,{locale: newState.value?locales![0]:locales![1]})
     return newState
   }
   
-  const {locales, push} = useRouter()
+  const {locales, push, asPath} = useRouter()
   const [isEnglish, isEnglishDispatch] = useReducer(languageEeducer, {value:true})
 
   return (
