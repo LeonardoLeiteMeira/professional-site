@@ -1,13 +1,7 @@
-import linkedinSelected from "../../../assets/svg/linkedingSelected.svg"
-import linkedin from "../../../assets/svg/linkedinDefault.svg"
-import gitHub from "../../../assets/svg/githubDefault.svg"
-import gitHubSelected from "../../../assets/svg/githubSelected.svg"
-import instagram from "../../../assets/svg/instagramDefault.svg"
-import instagramSelected from "../../../assets/svg/instagramSelected.svg"
-
 import { useState } from "react"
 import Image from "next/image";
 import Link from "next/link"
+import Icons from "@/assets/icons";
 
 type Props = {
     socialMedia:"Linkedin"|"GitHub"|"Instagram"
@@ -18,26 +12,26 @@ export default function SocialMediaIcon({socialMedia, iconSize}:Props){
     const getInitialIcon = ()=>{
         switch (socialMedia) {
             case "Linkedin":
-                return linkedin;
+                return Icons.Linkedin;
             case "GitHub":
-                return gitHub;
+                return Icons.GitHub;
             case "Instagram":
-                return instagram;
+                return Icons.Instagram;
         }
     }
 
     const changeIconHandle = ()=>{
         switch (socialMedia) {
             case "Linkedin":
-                setIcon(icon===linkedin?linkedinSelected:linkedin)
+                setIcon(icon===Icons.Linkedin?Icons.LinkedinSelected:Icons.Linkedin)
                 break;
                 
             case "GitHub":
-                setIcon(icon===gitHub?gitHubSelected:gitHub)
+                setIcon(icon===Icons.GitHub?Icons.GitHubSelected:Icons.GitHub)
                 break;    
 
             case "Instagram":
-                setIcon(icon===instagram?instagramSelected:instagram)
+                setIcon(icon===Icons.Instagram?Icons.InstagramSelected:Icons.Instagram)
                 break;   
         }
     }

@@ -6,7 +6,7 @@ import SwitchLanguage from "../switchLanguage";
 
 
 const NavBarStyle = styled(Grid)<GridProps>(({theme})=>({
-    backgroundColor: "#FAF8F6"
+    backgroundColor: theme.palette.background.paper
 }))
 
 const NavbarText = styled(Typography)<TypographyProps>(({theme})=>({

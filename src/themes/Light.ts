@@ -8,6 +8,9 @@ export const lightTheme = createTheme({
         secondary:{
             main:"#2F88D6",
         },
+        background:{
+            paper:"#FAF8F6"
+        }
     },
     typography:{
         h1:{
@@ -27,6 +30,11 @@ export const lightTheme = createTheme({
             fontFamily:"Montserrat Extra Light",
             letterSpacing:"-2%",
             fontWeight:"lighter"
+        },
+        subtitle1:{
+            fontFamily:"Montserrat Extra Light",
+            letterSpacing:"-2%",
+            fontSize:18
         }
     }
 })
