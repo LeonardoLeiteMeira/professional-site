@@ -3,6 +3,8 @@ import { useTranslation } from "next-i18next";
 import ContactButton from "../contactButton";
 import SocialMedias from "../socialMedias";
 import SwitchLanguage from "../switchLanguage";
+import Link from "next/link"
+import CustomLink from "../customLink";
 
 
 const NavBarStyle = styled(Grid)<GridProps>(({theme})=>({
@@ -18,10 +20,22 @@ export default function Navbar(){
     const { t } = useTranslation()
     return (
         <NavBarStyle container flexDirection={"row"} justifyContent="space-around" width={"100vw"} alignItems="center" height={theme.spacing(8)}>
-            <NavbarText>{t("Start")}</NavbarText>
-            <NavbarText>{t("About")}</NavbarText>
-            <NavbarText>{t("Work Methodoly")}</NavbarText>
-            <NavbarText>{t("Work Experience")}</NavbarText>
+            <CustomLink href={"/"}>
+                <NavbarText>{t("Start")}</NavbarText>
+            </CustomLink>
+
+            <CustomLink href={"/about"}>
+                <NavbarText>{t("About")}</NavbarText>
+            </CustomLink>
+
+            <CustomLink href={"/workMethodology"}>
+                <NavbarText>{t("Work Methodoly")}</NavbarText>
+            </CustomLink>
+
+            <CustomLink href={"works"}>
+                <NavbarText>{t("Work Experience")}</NavbarText>
+            </CustomLink>
+
             <SocialMedias size="small"/>
             <ContactButton size="small"/>
             <SwitchLanguage isNavbar={true}/>

@@ -2,11 +2,7 @@ import { Typography, styled, useMediaQuery, Theme, Grid } from "@mui/material";
 import { TypographyProps } from "@mui/system";
 import Link, { LinkProps } from "next/link";
 import { useTranslation } from "next-i18next";
-
-const LinkStyled = styled(Link)<LinkProps>(()=>({
-  textDecoration: "none",
-  color: "inherit",
-}))
+import CustomLink from "../customLink";
 
 const LinkText = styled(Typography)<TypographyProps>(({theme})=>({
   fontSize:26,
@@ -28,17 +24,17 @@ export default function NavigationLinks(){
   
     return (
     <Grid item container display={"flex"} flexDirection="column" alignItems={isDesktop?"end":"center"} gap={isDesktop?8:0}>
-        <LinkStyled href={"/works"}>
+        <CustomLink href={"/works"}>
           <LinkText variant="h3">{t("Work Experience")}</LinkText>
-        </LinkStyled>
+        </CustomLink>
         
-        <LinkStyled href={"/workMethodology"}>
+        <CustomLink href={"/workMethodology"}>
           <LinkText variant="h3">{t("Work Methodoly")}</LinkText>
-        </LinkStyled>
+        </CustomLink>
 
-        <LinkStyled href={"/about"}>
+        <CustomLink href={"/about"}>
           <LinkText variant="h3">{t("About")}</LinkText>
-        </LinkStyled>
+        </CustomLink>
       </Grid>   
     )
 }
