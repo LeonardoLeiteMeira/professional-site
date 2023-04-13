@@ -9,7 +9,7 @@ export const lightTheme = createTheme({
             main:"#2F88D6",
         },
         background:{
-            paper:"#FAF8F6"
+            paper:"#FAF8F6",
         }
     },
     typography:{
@@ -22,16 +22,26 @@ export const lightTheme = createTheme({
             letterSpacing:"-2%",
             fontFamily:"Text me one", 
         },
-        button:{
-            letterSpacing:"-2%",
-            fontFamily:"Text me one",
-        },
         h3:{
             fontFamily:"Montserrat Extra Light",
             letterSpacing:"-2%",
             fontWeight:"lighter"
         },
+        button:{
+            letterSpacing:"-2%",
+            fontFamily:"Text me one",
+        },
         subtitle1:{
+            letterSpacing:"-2%",
+            fontFamily:"Text me one",
+            fontSize:28
+        },
+        subtitle2:{
+            fontFamily:"Montserrat Extra Light",
+            fontSize:18
+        },
+        body1:{
+            color:"black",
             fontFamily:"Montserrat Extra Light",
             letterSpacing:"-2%",
             fontSize:18

@@ -1,23 +1,25 @@
-import Navbar from "@/components/navbar";
-import { styled } from "@mui/material";
+import WorksDesktop from "@/layouts/works/desktop";
+import WorksMobile from "@/layouts/works/mobile";
+import { Theme, styled, useMediaQuery } from "@mui/material";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const Section = styled("section")(({theme})=>({
   backgroundColor:"#61DAFB",
-  with:"100vw",
-  height:"100vh"
+  height:"100%",
+  minHeight:"100vh"
 }))
 
 export default function Works(){
+  const isDesktop = useMediaQuery((theme:Theme) => theme.breakpoints.up('md'));
     return (
+      <>
         <Section>
-            <Navbar/>
-            <h1>My Works</h1>
+          {isDesktop?<WorksDesktop/>:<WorksMobile/>}
         </Section>
+      </>
     )
 }
-
 
 export const getStaticProps: GetStaticProps = async ({locale}) => ({
   props: {
