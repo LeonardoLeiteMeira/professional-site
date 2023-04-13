@@ -1,4 +1,5 @@
 import { Theme, Typography, TypographyProps, styled, useMediaQuery } from "@mui/material"
+import { useTranslation } from "next-i18next";
 
 const BodyText = styled(Typography)<TypographyProps>(({theme})=>({
     marginLeft:theme.spacing(4),
@@ -7,16 +8,16 @@ const BodyText = styled(Typography)<TypographyProps>(({theme})=>({
 
 export default function Description(){
     const isDesktop = useMediaQuery((theme:Theme) => theme.breakpoints.up('md'));
+    const {t} = useTranslation("common")
     return (
         <>
             <BodyText variant="body1" align="justify">
-                Eu desenvolvi sistemas em diferentes contextos, incluindo empresas júnior e startup. 
+                {t("Work Experience Description1")}
             </BodyText>
             <br/>
             <BodyText variant="body1" align="justify">
-                Agora, estou fazendo meu mestrado e trabalhando em um grande projeto. Abaixo estão listados alguns dos projetos que participei. 
-                
-                {isDesktop?" Clique":" Toque"} para ver detalhes:
+                {t("Work Experience Description2")}
+                {t(isDesktop?"Click to see details:":"Touch to see details:")}
             </BodyText>
             <br/>  
         </>
