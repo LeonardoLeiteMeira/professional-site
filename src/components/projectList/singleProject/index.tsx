@@ -49,6 +49,8 @@ export default function SingleProject({title, technologies}:Props){
                         alt={`${item} icon`}
                         width={iconSize} 
                         height={iconSize}
+
+                        key={item}
                     /> 
                 ))}
             </GridIconsStyled>

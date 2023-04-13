@@ -16,9 +16,7 @@ export default function CustomAppBar({children, title}:Props){
                     <IconButton size="large" edge="start" aria-label="menu">
                         <MenuIcon />
                     </IconButton>
-                    <Grid container width={"100vw"} justifyContent={"center"}>
-                        <Typography variant="subtitle1" color={"black"}>{title}</Typography>
-                    </Grid>
+                        <Typography variant="subtitle1" color={"black"}>{title}</Typography>                    
                 </Toolbar>
             </AppBar>
 

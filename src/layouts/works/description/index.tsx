@@ -17,7 +17,6 @@ export default function Description(){
             <br/>
             <BodyText variant="body1" align="justify">
                 {t("Work Experience Description2")}
-                {t(isDesktop?"Click to see details:":"Touch to see details:")}
             </BodyText>
             <br/>  
         </>
