@@ -11,6 +11,7 @@ export default function SocialMedias({size, align="center"}:Props){
     const theme:Theme = useTheme()
     const isSmallScreen = useMediaQuery((theme:Theme) => theme.breakpoints.down('sm'));
     const smallIconSize = isSmallScreen?23:30
+    
     const iconSize = size==="small"?smallIconSize:45
     const spacing = size==="small"?20:40
 

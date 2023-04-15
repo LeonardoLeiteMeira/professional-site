@@ -53,7 +53,7 @@ export default function SocialMediaIcon({socialMedia, iconSize}:Props){
     const logoSize = iconSize;
 
     return (
-        <Link href={getLink()}>
+        <Link href={getLink()} target="_blank" rel="noopener noreferrer">
             <Image 
                 src={icon} 
                 alt={`${socialMedia.toString()} icon`}

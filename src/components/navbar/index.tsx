@@ -3,7 +3,6 @@ import { useTranslation } from "next-i18next";
 import ContactButton from "../contactButton";
 import SocialMedias from "../socialMedias";
 import SwitchLanguage from "../switchLanguage";
-import Link from "next/link"
 import CustomLink from "../customLink";
 
 
