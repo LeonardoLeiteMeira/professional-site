@@ -11,7 +11,8 @@ const NavBarStyle = styled(Grid)<GridProps>(({theme})=>({
 }))
 
 const NavbarText = styled(Typography)<TypographyProps>(({theme})=>({
-    color:"black"
+    color:"black",
+    fontSize:20
 }))
 
 export default function Navbar(){
