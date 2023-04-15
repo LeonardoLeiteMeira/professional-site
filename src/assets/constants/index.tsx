@@ -15,4 +15,20 @@ interface PageLink{
   link:string
 }
 
+const links:Array<PageLink> = [
+  {
+    name:"Work Experience",
+    link:"/works"
+  },
+  {
+    name:"Work Methodoly",
+    link:"/workMethodology"
+  },
+  {
+    name:"About",
+    link:"/about"
+  },
+]
+
+export {links}
 export type { Technology, PageLink }

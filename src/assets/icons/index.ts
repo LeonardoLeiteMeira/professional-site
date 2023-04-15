@@ -16,6 +16,7 @@ import aws_s3 from "./svg/S3Icon.svg"
 import sql from "./svg/SQLIcon.svg"
 import whatsApp from "./svg/WhatsappIcon.svg"
 import email from "./svg/EmailIcon.svg"
+import closeMenu from "./svg/CloseMenu.svg"
 
 const Icons = {
     "Flutter":flutter,
@@ -35,7 +36,8 @@ const Icons = {
     "Instagram":instagram,
     "InstagramSelected":instagramSelected,
     "WhatsApp":whatsApp,
-    "Email":email
+    "Email":email,
+    "CloseMenu":closeMenu
 }
 
 export default Icons

@@ -1,5 +1,7 @@
-import { AppBar, Box, Grid, IconButton, Toolbar, Typography, useTheme } from "@mui/material";
+import { AppBar, Box, Button, Drawer, Grid, IconButton, Toolbar, Typography, useTheme } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
+import { useState } from "react";
+import CustonDrawer from "../customDrawer";
 
 interface Props{
     children:React.ReactNode,
@@ -9,11 +11,13 @@ interface Props{
 
 export default function CustomAppBar({children, title}:Props){
     const theme = useTheme()
+    const [isOpen, setIsOpen] = useState(false)
     return (
         <>
+            <CustonDrawer isOpen={isOpen} setIsOpen={setIsOpen}/>
             <AppBar position="fixed" sx={{ bgcolor: theme.palette.background.paper}}>
                 <Toolbar variant="dense">
-                    <IconButton size="large" edge="start" aria-label="menu">
+                    <IconButton onClick={()=>setIsOpen(value=>!value)} size="large" edge="start" aria-label="menu">
                         <MenuIcon />
                     </IconButton>
                         <Typography variant="subtitle1" color={"black"}>{title}</Typography>                    

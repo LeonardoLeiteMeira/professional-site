@@ -1,21 +1,6 @@
 import LargeNavigationLink from "./large";
 import SimpleNavigationLink from "./simple";
-import { PageLink } from "@/assets/constants";
-
-const links:Array<PageLink> = [
-  {
-    name:"Work Experience",
-    link:"/works"
-  },
-  {
-    name:"Work Methodoly",
-    link:"/workMethodology"
-  },
-  {
-    name:"About",
-    link:"/about"
-  },
-]
+import { links } from "@/assets/constants";
 
 interface Props{
   type: "Large"|"Simple"
