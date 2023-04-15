@@ -10,6 +10,10 @@ const LogoStyle = styled(Image)<ImageProps>(({theme})=>({
         width: 300,
         height: 300,
     },
+    [theme.breakpoints.down("sm")]:{
+        width: 90,
+        height: 90,
+    },
 }))
 
 const LogoContainer = styled("div")(({theme})=>({

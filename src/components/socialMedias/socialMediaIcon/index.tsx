@@ -5,7 +5,7 @@ import Icons from "@/assets/icons";
 
 type Props = {
     socialMedia:"Linkedin"|"GitHub"|"Instagram"
-    iconSize:30|45
+    iconSize:23|30|45
 }
 
 export default function SocialMediaIcon({socialMedia, iconSize}:Props){

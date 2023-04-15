@@ -16,7 +16,7 @@ export default function WorksDesktop(){
         <Section>
             <Navbar/>
             <Grid container height={"80vh"} alignContent={"center"} gap={10}>
-                <Typography variant="h3" marginLeft={theme.spacing(4)} marginRight={theme.spacing(4)} >
+                <Typography variant="h4" marginLeft={theme.spacing(4)} marginRight={theme.spacing(4)} >
                     {t("Work Experience")}
                 </Typography>
 

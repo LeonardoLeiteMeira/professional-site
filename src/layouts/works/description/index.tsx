@@ -11,11 +11,11 @@ export default function Description(){
     const {t} = useTranslation("common")
     return (
         <>
-            <BodyText variant="body1" align="justify">
+            <BodyText variant="body2" align="justify" fontSize={18}>
                 {t("Work Experience Description1")}
             </BodyText>
             <br/>
-            <BodyText variant="body1" align="justify">
+            <BodyText variant="body2" align="justify" fontSize={18}>
                 {t("Work Experience Description2")}
             </BodyText>
             <br/>  

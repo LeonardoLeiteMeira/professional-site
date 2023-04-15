@@ -30,7 +30,7 @@ export default function IndexMobile(){
           </Grid>
           <Grid item container flexDirection="column" gap={5}>
             <Grid item display="flex" justifyContent={'center'}>
-              <NavigationLinks/>
+              <NavigationLinks type="Large"/>
             </Grid>
 
             <Grid item display="flex" justifyContent={'center'}>

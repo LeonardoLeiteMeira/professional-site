@@ -14,6 +14,8 @@ import azure from "./svg/AzureIcon.svg"
 import figma from "./svg/FigmaIcon.svg"
 import aws_s3 from "./svg/S3Icon.svg"
 import sql from "./svg/SQLIcon.svg"
+import whatsApp from "./svg/WhatsappIcon.svg"
+import email from "./svg/EmailIcon.svg"
 
 const Icons = {
     "Flutter":flutter,
@@ -31,7 +33,9 @@ const Icons = {
     "GitHub":gitHub,
     "GitHubSelected":gitHubSelected,
     "Instagram":instagram,
-    "InstagramSelected":instagramSelected
+    "InstagramSelected":instagramSelected,
+    "WhatsApp":whatsApp,
+    "Email":email
 }
 
 export default Icons

@@ -8,6 +8,11 @@ const DividerStyled = styled("div")(({ theme }) => ({
     [theme.breakpoints.up("md")]:{
         height: theme.spacing(1),
         borderRadius:"20px"
+    },
+    [theme.breakpoints.down("md")]:{
+        height: theme.spacing(0.4),
+        borderRadius:"20px",
+        maxWidth:theme.spacing(25)
     }
 }));
 

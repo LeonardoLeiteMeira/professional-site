@@ -22,7 +22,7 @@ export default function IndextDesktop(){
 
         <Grid item container  height={"100vh"} width={"50vw"} alignContent={"space-between"} justifyContent={"end"}>
             <SwitchLanguage/>
-            <NavigationLinks/>
+            <NavigationLinks type="Large"/>
             <Box marginBottom={theme.spacing(4)}>
                 <SocialMedias/>
             </Box>

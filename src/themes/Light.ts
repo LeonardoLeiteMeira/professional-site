@@ -1,4 +1,5 @@
 import { createTheme } from "@mui/material";
+import { TypographyOptions, Variant } from "@mui/material/styles/createTypography";
 
 export const lightTheme = createTheme({
     palette:{
@@ -23,6 +24,10 @@ export const lightTheme = createTheme({
             fontFamily:"Text me one", 
         },
         h3:{
+            letterSpacing:"-2%",
+            fontFamily:"Text me one", 
+        },
+        h4:{
             fontFamily:"Montserrat Extra Light",
             letterSpacing:"-2%",
             fontWeight:"lighter"
@@ -44,7 +49,12 @@ export const lightTheme = createTheme({
             color:"black",
             fontFamily:"Montserrat Extra Light",
             letterSpacing:"-2%",
-            fontSize:18
-        }
-    }
+            fontSize:24
+        },
+        body2:{
+            color:"black",
+            fontFamily:"Montserrat Extra Light",
+            letterSpacing:"-2%",
+        },
+    } 
 })

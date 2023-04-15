@@ -10,5 +10,9 @@ type Technology =
     "AWS-S3"|
     "SQL"
 
+interface PageLink{
+  name:string
+  link:string
+}
 
-export type {Technology}
+export type { Technology, PageLink }
