@@ -1,3 +1,5 @@
+import projectTechnologies from "./projectsTechnologies"
+
 type Technology =  
     "Flutter"|
     "React"|
@@ -30,5 +32,5 @@ const links:Array<PageLink> = [
   },
 ]
 
-export {links}
+export {links, projectTechnologies}
 export type { Technology, PageLink }

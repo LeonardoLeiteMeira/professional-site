@@ -1,39 +1,44 @@
 import { GetStaticPaths, GetStaticPathsContext, GetStaticProps } from "next"
-import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { useRouter } from "next/router"
 import fs from 'fs'
-
-export default function WorkDetails(){
-    const router = useRouter()
-    const { details:project } = router.query
-    const {t} = useTranslation(project)
-    
-    return (
-        <>
-            <h1>WorkDetails</h1>    
-            {project}
-            <br/>
-            {t("project name")}
-            <br/>
-            {t("my learnings")}
-        </>
-    )
-}
-
-export const getStaticProps: GetStaticProps = async ({locale}) => {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale ?? 'en', ['common','project'])),
-    }
-  }
-}
+import { Grid, Theme, useMediaQuery } from "@mui/material"
+import ProjectDetailsDesktop from "@/layouts/workDetails/desktop"
+import ProjectDetailsMobile from "@/layouts/workDetails/mobile"
 
 interface Path {
     params: {
         details: string;
     };
     locale: string;
+}
+
+export default function WorkDetails(){
+    const router = useRouter()
+    const { details:project } = router.query
+    const isDesktop = useMediaQuery((theme:Theme) => theme.breakpoints.up('md'));
+
+    return (
+        <Grid container flexDirection={"column"} width={"100vw"} height={"100vh"}>
+            {isDesktop?
+                <ProjectDetailsDesktop project={project as string}/>
+                :<ProjectDetailsMobile project={project as string}/>}
+        </Grid>
+    )
+}
+
+export const getStaticProps: GetStaticProps = async ({locale}) => {
+  const files = fs.readdirSync('public/locales/en')
+
+  files.forEach((item, index)=>{
+    files[index] = item.split(".")[0]
+  })
+  
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? 'en', files)),
+    }
+  }
 }
 
 export const getStaticPaths: GetStaticPaths = async ({ locales }: GetStaticPathsContext) => {
@@ -49,7 +54,6 @@ export const getStaticPaths: GetStaticPaths = async ({ locales }: GetStaticPaths
   locales?.forEach((locale)=>{
     const localePath = projectFiles.map((project) => ({ params: { details: project }, locale: locale}))
     paths.push(...localePath)
-    
   })
 
   return { paths, fallback: false }

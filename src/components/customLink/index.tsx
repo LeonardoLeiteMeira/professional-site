@@ -4,6 +4,7 @@ import { styled } from "@mui/material";
 const LinkStyled = styled(Link)<LinkProps>(()=>({
   textDecoration: "none",
   color: "inherit",
+  alignItems:"center",
 }))
 
 interface Props{
