@@ -1,7 +1,7 @@
 {
-    "project name":"name in english",
-    "business description":"business description",
-    "technical description":"technical description",
-    "work methodology":"work methodology",
-    "my learnings":"my learnings"
+    "project name":"name in english text",
+    "business description":"business description text",
+    "technical description":"technical description text",
+    "work methodology":"work methodology text",
+    "my learnings":"my learnings text"
 }

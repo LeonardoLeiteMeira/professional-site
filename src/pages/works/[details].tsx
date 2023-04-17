@@ -1,4 +1,4 @@
-import { GetStaticPaths, GetStaticProps } from "next"
+import { GetStaticPaths, GetStaticPathsContext, GetStaticProps } from "next"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { useRouter } from "next/router"
@@ -14,7 +14,9 @@ export default function WorkDetails(){
             <h1>WorkDetails</h1>    
             {project}
             <br/>
-            {t("name")}
+            {t("project name")}
+            <br/>
+            {t("my learnings")}
         </>
     )
 }
@@ -27,7 +29,14 @@ export const getStaticProps: GetStaticProps = async ({locale}) => {
   }
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
+interface Path {
+    params: {
+        details: string;
+    };
+    locale: string;
+}
+
+export const getStaticPaths: GetStaticPaths = async ({ locales }: GetStaticPathsContext) => {
   const files = fs.readdirSync('public/locales/en')
   const projectFiles = files.filter((value)=>value!=="common.json")
 
@@ -35,7 +44,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
     projectFiles[index] = item.split(".")[0]
   })
   
-  const paths = projectFiles.map((project) => ({ params: { details: project } }))
-  
+  const paths:Array<Path> = []
+
+  locales?.forEach((locale)=>{
+    const localePath = projectFiles.map((project) => ({ params: { details: project }, locale: locale}))
+    paths.push(...localePath)
+    
+  })
+
   return { paths, fallback: false }
 }
