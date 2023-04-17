@@ -43,7 +43,7 @@ export const lightTheme = createTheme({
         },
         subtitle2:{
             fontFamily:"Montserrat Extra Light",
-            fontSize:18
+            fontSize:16
         },
         body1:{
             color:"black",

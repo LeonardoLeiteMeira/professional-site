@@ -1,40 +1,51 @@
+import { Technology } from "."
+
 interface ProjectTechnologies{
+    title:string
     name:string
-    technologies:Array<string>
+    technologies:Array<Technology>
 }
 
 const projectTechnologies:Array<ProjectTechnologies> = [
     {
-        name:"Data lake - Predictive maintenance",
-        technologies:[]
+        title:"Data lake - Predictive maintenance",
+        name:"datalake",
+        technologies:["React", "Figma", "Python", "MongoDB"]
     },
     {
-        name:"Financial Management App with Notion",
-        technologies:[]
+        title:"Financial Management App",
+        name:"financialWithNotion",
+        technologies:["Flutter", "Notion","Figma"]
     },
     {
-        name:"JobPet - Professional's App",
-        technologies:[]
+        title:"JobPet - Professional's App",
+        name:"jobPetApp",
+        technologies:["Flutter", "Node", "Figma", "MongoDB"]
     },
     {
-        name:"Resource optimization App",
-        technologies:[]
+        title:"Resource optimization App",
+        name:"resourceOptimizationApp",
+        technologies:["Flutter", "Azure"]
     },
     {
-        name:"Customer service system",
-        technologies:[]
+        title:"Customer service system",
+        name:"customerServiceSystem",
+        technologies:["React", "Node", "SQL", "AWS-S3"]
     },
     {
-        name:"Document management App",
-        technologies:[]
+        title:"Document management App",
+        name:"documentManagementApp",
+        technologies:["Flutter","Figma"]
     },
     {
-        name:"Data collection system",
-        technologies:[]
+        title:"Data collection system",
+        name:"dataCollectionSystem",
+        technologies:["React", "Flutter", "C#","SQL","Azure"]
     },
     {
-        name:"This portfolio",
-        technologies:[]
+        title:"This portfolio",
+        name:"portfolio",
+        technologies:["React", "Figma"]
     }
 ]
 

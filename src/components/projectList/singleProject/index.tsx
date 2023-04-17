@@ -25,19 +25,20 @@ const GridIconsStyled  = styled(Grid)<GridProps>(()=>({
 interface Props{
     title:string
     technologies:Array<Technology>
+    name:string
 }
 
-export default function SingleProject({title, technologies}:Props){
+export default function SingleProject({title, technologies, name}:Props){
     const iconSize = 30
     const isDesktop = useMediaQuery((theme:Theme) => theme.breakpoints.up('md'));
     const theme = useTheme()
-    
+
     const xsValue = isDesktop?6:12
 
     return (
         <Grid item xs={xsValue} container direction="column" justifyContent="center" alignItems="center" >
-            <CustomLink href={"/works/project"}>
-                <GridStyled item container width={isDesktop?"auto":"100vw"}  margin={theme.spacing(1)}>
+            <CustomLink href={`/works/${name}`}>
+                <GridStyled item container width={isDesktop?"23vw":"100vw"}  margin={theme.spacing(1)}>
                     <TitleStyled item container justifyContent={"center"}>
                         <Typography variant="subtitle2">{title}</Typography>
                     </TitleStyled>

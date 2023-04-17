@@ -10,7 +10,8 @@ type Technology =
     "Azure"|
     "Figma"|
     "AWS-S3"|
-    "SQL"
+    "SQL"|
+    "Notion"
 
 interface PageLink{
   name:string

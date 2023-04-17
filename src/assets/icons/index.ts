@@ -17,6 +17,7 @@ import sql from "./svg/SQLIcon.svg"
 import whatsApp from "./svg/WhatsappIcon.svg"
 import email from "./svg/EmailIcon.svg"
 import closeMenu from "./svg/CloseMenu.svg"
+import notionLogo from "./svg/NotionLogo.svg"
 
 const Icons = {
     "Flutter":flutter,
@@ -37,7 +38,8 @@ const Icons = {
     "InstagramSelected":instagramSelected,
     "WhatsApp":whatsApp,
     "Email":email,
-    "CloseMenu":closeMenu
+    "CloseMenu":closeMenu,
+    "Notion":notionLogo
 }
 
 export default Icons
