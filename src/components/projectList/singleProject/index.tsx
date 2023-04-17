@@ -1,6 +1,7 @@
 import { Technology } from "@/assets/constants";
 import Icons from "@/assets/icons";
-import { Box, Grid, GridProps, Typography, styled, useTheme } from "@mui/material";
+import CustomLink from "@/components/customLink";
+import { Grid, GridProps, Typography, styled } from "@mui/material";
 import Image from "next/image";
 
 const GridStyled = styled(Grid)<GridProps>(({theme})=>({
@@ -30,30 +31,28 @@ interface Props{
 export default function SingleProject({title, technologies}:Props){
     const iconSize = 30
 
-    const handleClick = (projectTitle:string)=>{
-        console.log(`navegar para o projeto ${projectTitle}`)
-    }
-
     return (
-        <GridStyled container display={"flex"} flexDirection={"column"} 
-            onClick={()=>handleClick(title)}
-        >
-            <TitleStyled item container justifyContent={"center"}>
-                <Typography variant="subtitle2">{title}</Typography>
-            </TitleStyled>
+        <>
+        <CustomLink href={"/works/project"}>
+            <GridStyled container display={"flex"} flexDirection={"column"} >
+                <TitleStyled item container justifyContent={"center"}>
+                    <Typography variant="subtitle2">{title}</Typography>
+                </TitleStyled>
 
-            <GridIconsStyled item container display={"flex"} flexDirection={"row"} gap={5} justifyContent={"center"}>
-                {technologies.map((item)=>(
-                    <Image 
-                        src={Icons[item]} 
-                        alt={`${item} icon`}
-                        width={iconSize} 
-                        height={iconSize}
+                <GridIconsStyled item container display={"flex"} flexDirection={"row"} gap={5} justifyContent={"center"}>
+                    {technologies.map((item)=>(
+                        <Image 
+                            src={Icons[item]} 
+                            alt={`${item} icon`}
+                            width={iconSize} 
+                            height={iconSize}
 
-                        key={item}
-                    /> 
-                ))}
-            </GridIconsStyled>
-        </GridStyled>
+                            key={item}
+                        /> 
+                    ))}
+                </GridIconsStyled>
+            </GridStyled>
+        </CustomLink>
+        </>
     )
 } 
