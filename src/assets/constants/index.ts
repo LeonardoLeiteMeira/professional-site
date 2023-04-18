@@ -1,4 +1,4 @@
-import projectTechnologies from "./projectsTechnologies"
+import projectTechnologies, { ProjectTechnologies } from "./projectsTechnologies"
 
 type Technology =  
     "Flutter"|
@@ -34,4 +34,4 @@ const links:Array<PageLink> = [
 ]
 
 export {links, projectTechnologies}
-export type { Technology, PageLink }
+export type { Technology, PageLink ,ProjectTechnologies}

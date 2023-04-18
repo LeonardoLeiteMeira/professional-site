@@ -17,7 +17,6 @@ export default function ProjectList(){
             direction={"row"}  
         >
             {projectTechnologies.map((project)=>(
-                
                 <SingleProject
                     title={project.title}
                     technologies={project.technologies}

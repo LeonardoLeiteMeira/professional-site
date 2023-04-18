@@ -1,8 +1,7 @@
 import { Technology } from "@/assets/constants";
-import Icons from "@/assets/icons";
 import CustomLink from "@/components/customLink";
+import TechnologiesRow from "@/components/technologiesRow";
 import { Grid, GridProps, Theme, Typography, styled, useMediaQuery, useTheme } from "@mui/material";
-import Image from "next/image";
 
 const GridStyled = styled(Grid)<GridProps>(({theme})=>({
     backgroundColor: theme.palette.background.paper,
@@ -29,7 +28,7 @@ interface Props{
 }
 
 export default function SingleProject({title, technologies, name}:Props){
-    const iconSize = 30
+    
     const isDesktop = useMediaQuery((theme:Theme) => theme.breakpoints.up('md'));
     const theme = useTheme()
 
@@ -38,23 +37,11 @@ export default function SingleProject({title, technologies, name}:Props){
     return (
         <Grid item xs={xsValue} container direction="column" justifyContent="center" alignItems="center" >
             <CustomLink href={`/works/${name}`}>
-                <GridStyled item container width={isDesktop?"23vw":"100vw"}  margin={theme.spacing(1)}>
+                <GridStyled item container width={isDesktop?"23vw":"100vw"} margin={theme.spacing(1)}>
                     <TitleStyled item container justifyContent={"center"}>
                         <Typography variant="subtitle2">{title}</Typography>
                     </TitleStyled>
-
-                    <GridIconsStyled item container display={"flex"} flexDirection={"row"} gap={3} justifyContent={"center"}>
-                        {technologies.map((item)=>(
-                            <Image 
-                                src={Icons[item]} 
-                                alt={`${item} icon`}
-                                width={iconSize} 
-                                height={iconSize}
-
-                                key={item}
-                            /> 
-                        ))}
-                    </GridIconsStyled>
+                    <TechnologiesRow technologies={technologies}/>
                 </GridStyled>
             </CustomLink>
         </Grid>

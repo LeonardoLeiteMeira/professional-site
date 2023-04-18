@@ -2,8 +2,10 @@ import { Technology } from "."
 
 interface ProjectTechnologies{
     title:string
-    name:string
     technologies:Array<Technology>
+
+    //needs to be the same name of translaction file
+    name:string
 }
 
 const projectTechnologies:Array<ProjectTechnologies> = [
@@ -50,17 +52,5 @@ const projectTechnologies:Array<ProjectTechnologies> = [
 ]
 
 export default projectTechnologies
-
-
-
-
-
-
-
-
-
-
-
-
-
+export type {ProjectTechnologies}
 

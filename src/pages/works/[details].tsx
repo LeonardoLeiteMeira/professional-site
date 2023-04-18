@@ -1,10 +1,17 @@
+import { Grid, GridProps, Theme, styled, useMediaQuery } from "@mui/material"
 import { GetStaticPaths, GetStaticPathsContext, GetStaticProps } from "next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { useRouter } from "next/router"
-import fs from 'fs'
-import { Grid, Theme, useMediaQuery } from "@mui/material"
 import ProjectDetailsDesktop from "@/layouts/workDetails/desktop"
 import ProjectDetailsMobile from "@/layouts/workDetails/mobile"
+import { projectTechnologies } from "@/assets/constants"
+import { useRouter } from "next/router"
+import fs from 'fs'
+
+const StyledGrid = styled(Grid)<GridProps>(()=>({
+  backgroundColor:"#91E8E8",
+  width:"100vw",
+  height:"100vh"
+}))
 
 interface Path {
     params: {
@@ -15,15 +22,16 @@ interface Path {
 
 export default function WorkDetails(){
     const router = useRouter()
-    const { details:project } = router.query
+    const { details:projectName } = router.query
     const isDesktop = useMediaQuery((theme:Theme) => theme.breakpoints.up('md'));
+    const project = projectTechnologies.find((project)=> project.name===projectName)!
 
     return (
-        <Grid container flexDirection={"column"} width={"100vw"} height={"100vh"}>
+        <StyledGrid container flexDirection={"column"} width={"100vw"} height={"100vh"}>
             {isDesktop?
-                <ProjectDetailsDesktop project={project as string}/>
-                :<ProjectDetailsMobile project={project as string}/>}
-        </Grid>
+                <ProjectDetailsDesktop project={project}/>
+                :<ProjectDetailsMobile project={project}/>}
+        </StyledGrid>
     )
 }
 

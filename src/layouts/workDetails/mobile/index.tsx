@@ -1,5 +1,7 @@
+import { ProjectTechnologies } from "@/assets/constants"
+
 interface Props{
-    project:string
+    project:ProjectTechnologies
 }
 
 export default function ProjectDetailsMobile({project}:Props){

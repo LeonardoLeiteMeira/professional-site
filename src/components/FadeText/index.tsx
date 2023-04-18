@@ -16,6 +16,10 @@ export default function FadeText({textOne, textTwo, isTextOne}:Props){
         setIsVisible(false)
     },[isTextOne])
 
+    useEffect(()=>{
+        setText(isTextOne?textTwo:textOne)
+    },[textOne, textTwo])
+
     const handleExited = async () => {
         setTimeout(()=>{
             setText(isTextOne?textTwo:textOne)
@@ -24,7 +28,7 @@ export default function FadeText({textOne, textTwo, isTextOne}:Props){
     };
 
     return (
-        <Fade in={isVisible} onExit={handleExited}>
+        <Fade in={isVisible} onExit={handleExited} timeout={300}>
             <Typography>{text}</Typography>
         </Fade>       
     )
