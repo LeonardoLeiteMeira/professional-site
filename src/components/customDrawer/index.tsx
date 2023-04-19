@@ -34,6 +34,7 @@ export default function CustonDrawer({isOpen, setIsOpen}:Props){
                     <SwitchLanguage isNavbar={true} />
 
                     <Grid container flexDirection={"column"} wrap="nowrap" paddingLeft={theme.spacing(2.5)} gap={5}>
+                        {/* //TODO TRADUZIR OS ITENS DO DRAWER*/}
                         {links.map((item)=>(
                             <Grid item key={item.name}>
                                 <CustomLink href={item.link}>
