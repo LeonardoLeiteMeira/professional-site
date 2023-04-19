@@ -24,7 +24,7 @@ export default function CustomAppBar({children, title}:Props){
                 </Toolbar>
             </AppBar>
 
-            <Box marginTop={theme.spacing(8)}>
+            <Box marginTop={theme.spacing(6)}>
                 {children}
             </Box>
         </>

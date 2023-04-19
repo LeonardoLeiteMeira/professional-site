@@ -25,7 +25,7 @@ export default function ProjectDetailsMobile({project}:Props){
     return (
         <>
             <CustomAppBar title={t("project name")}>
-                <Grid item container direction={"column"} wrap="nowrap">
+                <Grid item container direction={"column"} wrap="nowrap" paddingTop={theme.spacing(2)}>
                     <TechnologiesRow technologies={project.technologies}/>
                     <DetailsContent project={project} page={page}/>
                 </Grid>

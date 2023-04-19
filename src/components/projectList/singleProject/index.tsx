@@ -38,7 +38,7 @@ export default function SingleProject({title, technologies, name}:Props){
         <Grid item container xs={xsValue} direction="column" justifyContent="center" alignItems="center" width={"100%"}>
             <CustomLink href={`/works/${name}`}>
                 <GridStyled item container width={isDesktop?"23vw":"100vw"} margin={theme.spacing(1)}>
-                    <TitleStyled item container justifyContent={"center"}>
+                    <TitleStyled item container justifyContent={"center"} marginBottom={theme.spacing(1)}>
                         <Typography variant="subtitle2">{title}</Typography>
                     </TitleStyled>
                     <TechnologiesRow technologies={technologies}/>
