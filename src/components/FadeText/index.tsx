@@ -1,13 +1,16 @@
 import { Fade, Typography } from "@mui/material";
+import { Variant } from "@mui/material/styles/createTypography";
 import { useEffect, useState } from "react";
 
 interface Props{
     isTextOne:boolean
     textOne:string
     textTwo:string
+    variant?:Variant
+    fontSize?:number
 }
 
-export default function FadeText({textOne, textTwo, isTextOne}:Props){
+export default function FadeText({textOne, textTwo, isTextOne, variant, fontSize}:Props){
 
     const [isVisible, setIsVisible] = useState(true)
     const [text, setText] = useState(textOne)
@@ -29,7 +32,7 @@ export default function FadeText({textOne, textTwo, isTextOne}:Props){
 
     return (
         <Fade in={isVisible} onExit={handleExited} timeout={300}>
-            <Typography>{text}</Typography>
+            <Typography variant={variant} fontSize={fontSize}>{text}</Typography>
         </Fade>       
     )
 }

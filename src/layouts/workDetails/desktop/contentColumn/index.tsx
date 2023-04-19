@@ -1,6 +1,5 @@
 import FadeText from "@/components/FadeText";
 import { Box, Grid, useTheme } from "@mui/material";
-import { useTranslation } from "next-i18next";
 
 interface Props{
     title1:string
@@ -18,10 +17,10 @@ export default function ContentColumn({title1,title2,text1,text2,isContentOne}:P
     return (
         <Grid item container xs={6} flexDirection={"column"}>
             <Box>
-                <FadeText textOne={title1} textTwo={title2} isTextOne={isContentOne}/>
+                <FadeText textOne={title1} textTwo={title2} isTextOne={isContentOne} variant="h4"/>
             </Box>
             <Box marginTop={theme.spacing(5)}>
-                <FadeText textOne={text1} textTwo={text2} isTextOne={isContentOne}/>
+                <FadeText textOne={text1} textTwo={text2} isTextOne={isContentOne} variant="body1" fontSize={18}/>
             </Box>
         </Grid>  
     )

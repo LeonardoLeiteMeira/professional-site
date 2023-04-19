@@ -6,6 +6,7 @@ import TechnologiesRow from "@/components/technologiesRow"
 import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';
 import { useState } from "react"
 import ContentColumn from "./contentColumn"
+import CustomLink from "@/components/customLink"
 
 
 interface Props{
@@ -19,8 +20,11 @@ export default function ProjectDetailsDesktop({project}:Props){
 
     const marginToButtons = theme.spacing(8)
 
-    const [isTextOne, setIsTextOne] = useState(true);
+    const [isPageOne, setIsPageOne] = useState(false);
 
+    const handlePageChange = () => {
+        setIsPageOne(value=>!value)
+    }
 
     return (
         <>
@@ -32,7 +36,7 @@ export default function ProjectDetailsDesktop({project}:Props){
 
             <Grid container flex={1} padding={theme.spacing(3)}>
                 <ContentColumn
-                    isContentOne={isTextOne}
+                    isContentOne={isPageOne}
                     title1={tc("Product/Business Description")}
                     title2={tc("Work Methodoly")}
 
@@ -40,7 +44,7 @@ export default function ProjectDetailsDesktop({project}:Props){
                     text2={t("work methodology")}
                 />
                 <ContentColumn
-                    isContentOne={isTextOne}
+                    isContentOne={isPageOne}
                     title1={tc("Technical Description")}
                     title2={tc("My Learning")}
 
@@ -50,20 +54,15 @@ export default function ProjectDetailsDesktop({project}:Props){
 
             </Grid>
 
-            <Grid container display={"flex"} flexDirection={"column"} gap={2} maxWidth={"27vw"} alignSelf={"end"} marginBottom={marginToButtons} paddingRight={marginToButtons} >
-                <Grid onClick={()=>setIsTextOne(true)} item container flexDirection={"row"}  justifyContent={"space-between"} alignItems={"center"}>
-                    <Typography>{tc("Work Experience")}</Typography>
-                    <Box sx={{ transform: 'rotate(180deg)' }} >
-                        <ExpandCircleDownIcon />
-                    </Box>
-                </Grid>
-
-                <Grid onClick={()=>setIsTextOne(false)} item container flexDirection={"row"} justifyContent={"space-between"} alignItems={"center"} >
-                    <Typography>{tc("Work Methodoly")}</Typography>
-                    <Box>
-                        <ExpandCircleDownIcon />
-                    </Box>
-                </Grid>
+            <Grid container flexDirection={"column"} alignSelf={"end"} marginBottom={marginToButtons} paddingRight={marginToButtons} alignContent={"end"}>
+                <CustomLink href="#" underline>
+                    <Grid onClick={handlePageChange} item container flexDirection={"row"} justifyContent={"space-between"} alignItems={"center"} >
+                        <Typography>{isPageOne?tc("Business and Technical Description"):tc("Methodoly and Learnings")}</Typography>
+                        <Box marginLeft={theme.spacing(2)}>
+                            <ExpandCircleDownIcon sx={{ transform: isPageOne?'rotate(180deg)':"" }} />
+                        </Box>
+                    </Grid>
+                </CustomLink>
             </Grid>
         </>
     )
