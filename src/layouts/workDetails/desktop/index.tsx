@@ -7,7 +7,7 @@ import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';
 import { useState } from "react"
 import ContentColumn from "../contentColumn"
 import CustomLink from "@/components/customLink"
-import DetailsContent from "../detailsContent"
+import DetailsContent from "./detailsContent"
 
 
 interface Props{
@@ -38,7 +38,7 @@ export default function ProjectDetailsDesktop({project}:Props){
             <DetailsContent project={project} isPageOne={isPageOne}/>
 
             <Grid container flexDirection={"column"} alignSelf={"end"} marginBottom={marginToButtons} paddingRight={marginToButtons} alignContent={"end"}>
-                <CustomLink href="#" underline>
+                <CustomLink href="#" hasDecoration>
                     <Grid onClick={handlePageChange} item container flexDirection={"row"} justifyContent={"space-between"} alignItems={"center"} >
                         <Typography>{isPageOne?tc("Business and Technical Description"):tc("Methodoly and Learnings")}</Typography>
                         <Box marginLeft={theme.spacing(2)}>

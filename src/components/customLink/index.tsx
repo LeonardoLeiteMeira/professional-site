@@ -1,12 +1,7 @@
 import Link, { LinkProps } from "next/link"
 import { styled } from "@mui/material";
 
-interface LinkStyledProps extends LinkProps {
-  underline: boolean;
-}
-
-const LinkStyled = styled(Link)<LinkStyledProps>(({underline})=>({
-  textDecoration: underline?"":"none",
+const LinkStyled = styled(Link)<LinkProps>(()=>({
   color: "inherit",
   alignItems:"center",
 }))
@@ -14,12 +9,12 @@ const LinkStyled = styled(Link)<LinkStyledProps>(({underline})=>({
 interface Props{
     href:string
     children:React.ReactNode
-    underline?:boolean
+    hasDecoration?:boolean
 }
 
-export default function CustomLink({href, children, underline = false}:Props){
+export default function CustomLink({href, children, hasDecoration = false}:Props){
     return(
-        <LinkStyled href={href} underline={underline} >
+        <LinkStyled href={href} sx={{textDecoration: hasDecoration?"underline":"none"}} >
             {children}
         </LinkStyled>
     )
