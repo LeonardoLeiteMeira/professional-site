@@ -5,9 +5,8 @@ import { useTranslation } from "next-i18next"
 import TechnologiesRow from "@/components/technologiesRow"
 import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';
 import { useState } from "react"
-import ContentColumn from "../contentColumn"
+import ContentColumn from "./contentColumn"
 import CustomLink from "@/components/customLink"
-import DetailsContent from "../detailsContent"
 
 
 interface Props{
@@ -35,7 +34,25 @@ export default function ProjectDetailsDesktop({project}:Props){
                 <TechnologiesRow technologies={project.technologies}/>
             </Grid>
 
-            <DetailsContent project={project} isPageOne={isPageOne}/>
+            <Grid container flex={1} padding={theme.spacing(3)}>
+                <ContentColumn
+                    isContentOne={isPageOne}
+                    title1={tc("Product/Business Description")}
+                    title2={tc("Work Methodoly")}
+
+                    text1={t("business description")} 
+                    text2={t("work methodology")}
+                />
+                <ContentColumn
+                    isContentOne={isPageOne}
+                    title1={tc("Technical Description")}
+                    title2={tc("My Learning")}
+
+                    text1={t("technical description")}
+                    text2={t("my learnings")}
+                />
+
+            </Grid>
 
             <Grid container flexDirection={"column"} alignSelf={"end"} marginBottom={marginToButtons} paddingRight={marginToButtons} alignContent={"end"}>
                 <CustomLink href="#" underline>

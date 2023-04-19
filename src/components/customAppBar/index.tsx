@@ -20,7 +20,7 @@ export default function CustomAppBar({children, title}:Props){
                     <IconButton onClick={()=>setIsOpen(value=>!value)} size="large" edge="start" aria-label="menu">
                         <MenuIcon />
                     </IconButton>
-                        <Typography variant="subtitle1" color={"black"} noWrap overflow="hidden" textOverflow={"ellipsis"}>{title}</Typography>                    
+                        <Typography variant="subtitle1" color={"black"}>{title}</Typography>                    
                 </Toolbar>
             </AppBar>
 
