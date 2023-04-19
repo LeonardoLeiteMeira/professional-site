@@ -14,7 +14,7 @@ export default function DetailsContent({project,isPageOne}:Props){
     const theme = useTheme()
 
     return (
-        <Grid item container flex={1} padding={theme.spacing(3)}>
+        <Grid item container flex={1} padding={theme.spacing(3)} gap={2} wrap="nowrap">
             <ContentColumn
                 isContentOne={isPageOne}
                 title1={tc("Product/Business Description")}

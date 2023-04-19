@@ -8,6 +8,7 @@ import { useState } from "react"
 import ContentColumn from "../contentColumn"
 import CustomLink from "@/components/customLink"
 import DetailsContent from "./detailsContent"
+import DetailsNavigation from "../detailsNavigation"
 
 
 interface Props{
@@ -37,16 +38,12 @@ export default function ProjectDetailsDesktop({project}:Props){
 
             <DetailsContent project={project} isPageOne={isPageOne}/>
 
-            <Grid container flexDirection={"column"} alignSelf={"end"} marginBottom={marginToButtons} paddingRight={marginToButtons} alignContent={"end"}>
-                <CustomLink href="#" hasDecoration>
-                    <Grid onClick={handlePageChange} item container flexDirection={"row"} justifyContent={"space-between"} alignItems={"center"} >
-                        <Typography>{isPageOne?tc("Business and Technical Description"):tc("Methodoly and Learnings")}</Typography>
-                        <Box marginLeft={theme.spacing(2)}>
-                            <ExpandCircleDownIcon sx={{ transform: isPageOne?'rotate(180deg)':"" }} />
-                        </Box>
-                    </Grid>
-                </CustomLink>
-            </Grid>
+            <DetailsNavigation
+                currentPage={isPageOne?1:2}
+                lastPage={2}
+                handlePageDown={handlePageChange}
+                handlePageUp={handlePageChange}
+            />
         </>
     )
 }
