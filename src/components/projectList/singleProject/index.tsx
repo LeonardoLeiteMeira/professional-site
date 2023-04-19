@@ -35,7 +35,7 @@ export default function SingleProject({title, technologies, name}:Props){
     const xsValue = isDesktop?6:12
 
     return (
-        <Grid item xs={xsValue} container direction="column" justifyContent="center" alignItems="center" >
+        <Grid item container xs={xsValue} direction="column" justifyContent="center" alignItems="center" width={"100%"}>
             <CustomLink href={`/works/${name}`}>
                 <GridStyled item container width={isDesktop?"23vw":"100vw"} margin={theme.spacing(1)}>
                     <TitleStyled item container justifyContent={"center"}>

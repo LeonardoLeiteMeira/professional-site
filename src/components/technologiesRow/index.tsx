@@ -1,6 +1,6 @@
 import { Technology } from "@/assets/constants"
 import Icons from "@/assets/icons";
-import { Grid, GridProps, styled, useTheme } from "@mui/material";
+import { Grid, GridProps, Theme, styled, useMediaQuery, useTheme } from "@mui/material";
 import Image from "next/image";
 
 const GridIconsStyled  = styled(Grid)<GridProps>(()=>({
@@ -15,9 +15,10 @@ interface Props{
 export default function TechnologiesRow({technologies}:Props){
     const theme = useTheme()
     const iconSize = 30
+    const isDesktop = useMediaQuery((theme:Theme) => theme.breakpoints.up('md'));
     
     return (
-        <GridIconsStyled item container flexDirection={"row"} gap={3} justifyContent={"center"} padding={theme.spacing(3)} maxWidth={"40vw"}>
+        <GridIconsStyled item container flexDirection={"row"} maxWidth={isDesktop?"40vw":"auto"} gap={3} justifySelf={"center"} justifyContent={"center"} wrap="nowrap">
             {technologies.map((item)=>(
                 <Image 
                     src={Icons[item]} 
