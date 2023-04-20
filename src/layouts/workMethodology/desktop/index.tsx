@@ -1,6 +1,6 @@
 import FadeImage from "@/components/FadeImage";
 import Navbar from "@/components/navbar";
-import { Box, Button, Grid, Typography, useTheme } from "@mui/material";
+import { Box, Grid, Typography, useTheme } from "@mui/material";
 import Icons from "@/assets/icons";
 import { useMemo, useState } from "react";
 import FadeText from "@/components/FadeText";

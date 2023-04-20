@@ -1,11 +1,10 @@
 import { ProjectTechnologies } from "@/assets/constants"
 import CustomAppBar from "@/components/customAppBar"
 import TechnologiesRow from "@/components/technologiesRow"
-import { Button, Grid, IconButton, Theme, Typography, useTheme } from "@mui/material"
+import { Grid, useTheme } from "@mui/material"
 import { useTranslation } from "next-i18next"
 import { useState } from "react"
 import DetailsContent from "./detailsContent"
-import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';
 import DetailsNavigation from "../../../components/detailsNavigation"
 
 interface Props{
@@ -13,7 +12,6 @@ interface Props{
 }
 
 export default function ProjectDetailsMobile({project}:Props){
-    const {t:tc} = useTranslation("common")
     const {t} = useTranslation(project.name)
 
     const theme = useTheme() 
