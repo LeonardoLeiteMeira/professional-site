@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material"
+import { Grid, Theme, Typography, useMediaQuery } from "@mui/material"
 import ContactButton from "../contactButton"
 import NavigationLinks from "../navigationLinks"
 import Icons from "@/assets/icons"
@@ -11,6 +11,7 @@ interface Props{
 }
 
 export default function ContactArea({fontSize, iconSize}:Props){
+    const isDesktop = useMediaQuery((theme:Theme) => theme.breakpoints.up('md'));
     const {t} = useTranslation()
     return (
         <>  
@@ -28,7 +29,7 @@ export default function ContactArea({fontSize, iconSize}:Props){
             </Grid>
             
             <Grid item>
-                <ContactButton size="small"/>
+                <ContactButton size={isDesktop?"small":"large"}/>
             </Grid>
             
             <Grid item>

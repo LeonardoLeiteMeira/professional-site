@@ -1,6 +1,6 @@
 import FadeImage from "@/components/FadeImage";
 import Navbar from "@/components/navbar";
-import { Button, Grid, Typography, useTheme } from "@mui/material";
+import { Box, Button, Grid, Typography, useTheme } from "@mui/material";
 import Icons from "@/assets/icons";
 import { useMemo, useState } from "react";
 import FadeText from "@/components/FadeText";
@@ -62,10 +62,10 @@ export default function WorkMethodologyDesktop(){
                     {column2}
                 </Grid>    
 
-                <Grid item container
-                    direction="row"
-                    justifyContent="flex-end"
-                    paddingBottom={theme.spacing(3)}
+                <Box 
+                    position="fixed"
+                    bottom={theme.spacing(3)}
+                    right={theme.spacing(3)}
                 >
                     <NavigationArrow
                         show={!true}
@@ -73,8 +73,7 @@ export default function WorkMethodologyDesktop(){
                         text={isPageOne?t("Next"):t("Previous")}
                         arrowOrientation={isPageOne?"down":"up"}
                     />
-                </Grid>
-                
+                </Box>
             </Grid>
         </>
     )
