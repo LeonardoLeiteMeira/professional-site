@@ -68,7 +68,7 @@ export default function WorkMethodologyDesktop(){
                     right={theme.spacing(3)}
                 >
                     <NavigationArrow
-                        show={!true}
+                        show={true}
                         onClick={handlePageChange}
                         text={isPageOne?t("Next"):t("Previous")}
                         arrowOrientation={isPageOne?"down":"up"}

@@ -67,14 +67,14 @@ export default function WorkMethodologyMobile(){
                         right={theme.spacing(3)}
                     >
                         <NavigationArrow
-                            show={!(page!==1)}
+                            show={page!==1}
                             arrowOrientation="up"
                             onClick={()=>handleChangePage("down")}
                             text={t("Previous")}
                         />
 
                         <NavigationArrow
-                            show={!(page!==4)}
+                            show={page!==4}
                             arrowOrientation="down"
                             onClick={()=>handleChangePage("up")}
                             text={t("Next")}
