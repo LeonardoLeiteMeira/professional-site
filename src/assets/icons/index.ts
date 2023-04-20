@@ -18,6 +18,10 @@ import whatsApp from "./svg/WhatsappIcon.svg"
 import email from "./svg/EmailIcon.svg"
 import closeMenu from "./svg/CloseMenu.svg"
 import notionLogo from "./svg/NotionLogo.svg"
+import emojiPc from "./svg/emojiPc.svg"
+import thinkingEmoji from "./svg/thinkingEmoji.svg"
+import ideiaEmoji from "./svg/ideiaEmoji.svg"
+import cicle from "./svg/cicle.svg"
 
 const Icons = {
     "Flutter":flutter,
@@ -39,7 +43,11 @@ const Icons = {
     "WhatsApp":whatsApp,
     "Email":email,
     "CloseMenu":closeMenu,
-    "Notion":notionLogo
+    "Notion":notionLogo,
+    "EmojiPC":emojiPc,
+    "ThinkingEmoji":thinkingEmoji,
+    "IdeiaEmoji":ideiaEmoji,
+    "Cicle":cicle
 }
 
 export default Icons

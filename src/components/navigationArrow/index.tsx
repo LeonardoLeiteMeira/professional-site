@@ -22,6 +22,7 @@ export default function NavigationArrow({show, text, arrowOrientation, onClick}:
 
     return (
         <Grid item container direction={"row"} wrap="nowrap" width={"100%"} justifyContent={"end"} alignItems={"center"}>
+            {/* {//TODO fix orientation} */}
             {show?<></>:
                 <>
                     <Typography variant={isDesktop?"body1":"body2"}>{textState}</Typography>

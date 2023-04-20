@@ -1,5 +1,4 @@
 import { createTheme } from "@mui/material";
-import { TypographyOptions, Variant } from "@mui/material/styles/createTypography";
 
 export const lightTheme = createTheme({
     palette:{
