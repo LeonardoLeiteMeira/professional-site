@@ -5,10 +5,10 @@ import { useTranslation } from "next-i18next"
 import TechnologiesRow from "@/components/technologiesRow"
 import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';
 import { useState } from "react"
-import ContentColumn from "../contentColumn"
+import ContentColumn from "../../../components/contentColumn"
 import CustomLink from "@/components/customLink"
 import DetailsContent from "./detailsContent"
-import DetailsNavigation from "../detailsNavigation"
+import DetailsNavigation from "../../../components/detailsNavigation"
 
 
 interface Props{

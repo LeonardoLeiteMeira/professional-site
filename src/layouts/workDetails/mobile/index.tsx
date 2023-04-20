@@ -6,7 +6,7 @@ import { useTranslation } from "next-i18next"
 import { useState } from "react"
 import DetailsContent from "./detailsContent"
 import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';
-import DetailsNavigation from "../detailsNavigation"
+import DetailsNavigation from "../../../components/detailsNavigation"
 
 interface Props{
     project:ProjectTechnologies

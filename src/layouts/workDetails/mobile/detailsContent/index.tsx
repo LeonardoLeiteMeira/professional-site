@@ -1,8 +1,7 @@
-import { Grid, Theme, useMediaQuery, useTheme } from "@mui/material";
-import ContentColumn from "../../contentColumn";
+import { Grid, useTheme } from "@mui/material";
+import ContentColumn from "../../../../components/contentColumn";
 import { useTranslation } from "next-i18next";
 import { ProjectTechnologies } from "@/assets/constants";
-import { useState } from "react";
 
 interface Props{
     project:ProjectTechnologies
@@ -12,7 +11,6 @@ interface Props{
 export default function DetailsContent({project,page}:Props){
     const {t:tc} = useTranslation("common")
     const {t} = useTranslation(project.name)
-    const isDesktop = useMediaQuery((theme:Theme) => theme.breakpoints.up('md'));
     const theme = useTheme()
 
     const pageOneAndTwo = (
@@ -37,7 +35,7 @@ export default function DetailsContent({project,page}:Props){
     )
 
     return (
-        <Grid item container flex={1} direction={isDesktop?undefined:"column"} padding={theme.spacing(3)} gap={isDesktop?"auto":5}>
+        <Grid item container flex={1} direction={"column"} padding={theme.spacing(3)} gap={5}>
             {page===1||page===2?pageOneAndTwo:pageThreeAndFour}
         </Grid>
     )

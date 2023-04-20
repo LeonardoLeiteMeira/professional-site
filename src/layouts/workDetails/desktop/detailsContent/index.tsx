@@ -1,5 +1,5 @@
 import { Grid, useTheme } from "@mui/material";
-import ContentColumn from "../../contentColumn";
+import ContentColumn from "../../../../components/contentColumn";
 import { useTranslation } from "next-i18next";
 import { ProjectTechnologies } from "@/assets/constants";
 
