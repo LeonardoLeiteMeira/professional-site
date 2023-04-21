@@ -30,7 +30,7 @@ export default function SwitchLanguage({isNavbar = false}:Props){
         <Flag            
           variant={isEnglish.value?"h4":"h6"}
         >
-          🏴󠁧󠁢󠁥󠁮󠁧󠁿 
+          🇬🇧
         </Flag> 
 
         <StyledSwitch checked={!isEnglish.value} onChange={isEnglishDispatch} size="medium"/>
