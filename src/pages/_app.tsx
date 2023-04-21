@@ -7,6 +7,7 @@ import { appWithTranslation } from 'next-i18next';
 function App({ Component, pageProps }: AppProps) {
   return (
     <main >
+      <title>Leonardo Leite - Alem do Tech</title>
       <ThemeProvider theme={lightTheme}>
         <Component {...pageProps} />
       </ThemeProvider>
