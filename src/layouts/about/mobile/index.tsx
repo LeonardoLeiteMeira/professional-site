@@ -5,7 +5,7 @@ import { useTranslation } from "next-i18next";
 import { FC, useEffect, useState } from "react";
 import AboutPresentation from "../pages/presentation";
 import AboutNow from "../pages/now";
-import AboutContact from "../pages/contact";
+import AboutContact from "../pages/contact/mobile";
 import React from "react";
 import AboutDiscipline from "../pages/discipline";
 import AboutFreeTime from "../pages/freeTime";
