@@ -16,15 +16,15 @@ export default function DetailsNavigation({currentPage,lastPage, handlePageUp, h
     return (
         <Grid item container direction={"column"} width="100vw" padding={theme.spacing(3)}>
             <NavigationArrow
-                onClick={handlePageUp}
-                show={currentPage!==1}
+                onClick={handlePageDown}
+                show={currentPage===1}
                 text={t("Previous")}
                 arrowOrientation="up"
             />
 
             <NavigationArrow
-                onClick={handlePageDown}
-                show={currentPage!==lastPage}
+                onClick={handlePageUp}
+                show={currentPage===lastPage}
                 text={t("Next")}
                 arrowOrientation="down"
             />
