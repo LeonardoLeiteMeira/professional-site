@@ -22,6 +22,11 @@ import emojiPc from "./svg/emojiPc.svg"
 import thinkingEmoji from "./svg/thinkingEmoji.svg"
 import ideiaEmoji from "./svg/ideiaEmoji.svg"
 import cicle from "./svg/cicle.svg"
+import me from "./svg/me.png"
+import presentationIPB from "./svg/presentationIPB.png"
+import campNou from "./svg/campNou.png"
+import athenas from "./svg/athenas.png"
+import commit from "./svg/commit.png"
 
 const Icons = {
     "Flutter":flutter,
@@ -47,7 +52,12 @@ const Icons = {
     "EmojiPC":emojiPc,
     "ThinkingEmoji":thinkingEmoji,
     "IdeiaEmoji":ideiaEmoji,
-    "Cicle":cicle
+    "Cicle":cicle,
+    "Me":me,
+    "PresentationIPB":presentationIPB,
+    "CampNou":campNou,
+    "Athenas":athenas,
+    "Commit":commit
 }
 
 export default Icons

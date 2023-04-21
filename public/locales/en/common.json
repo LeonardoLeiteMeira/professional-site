@@ -1,4 +1,5 @@
 {
+    "About me":"About me",
     "Software Engineer":"Software Engineer",
     "Contact":"Contact",
     "About":"About me",
@@ -20,5 +21,10 @@
     "How I work 1":"I am a person who works with technology and is also passionate about business. I believe that technology is capable of taking a business to a more professional, reliable, and scalable level, as long as there are well-structured processes and internal organization. That's why I always seek to improve my knowledge in these two fields, so I can offer innovative and efficient solutions to the companies I work with.",
     "How I work 2":"This way, the process of building a project starts with understanding the problem and defining the objective. Then, solution possibilities are raised and the best ideas are evaluated, considering risks, costs, and chances of success. In the fourth phase, a prototype is built to test the idea. These initial stages were designed to be quick and efficient, allowing for solutions to complex problems in a short amount of time, and then moving on to development.",
     "How I work 3":"Software development is incremental, that is, done in stages. Each stage adds functionality or improvements to the previous version of the software, allowing for evaluation of the product and deciding which features or improvements are needed for the next stage. At the end of each stage, there is a testable version to receive feedback from users and address issues or add features for the next stage. This agile approach allows development teams to respond to user and business needs efficiently, adjusting to market demands over time.",
-    "Are you interested in my work? Get in touch:":"Are you interested in my work? Get in touch:"
+    "Are you interested in my work? Get in touch:":"Are you interested in my work? Get in touch:",
+    "I hope to contribute":"I hope to contribute to the development of high-quality projects that truly generate business results.",
+    "I always seek to develop my discipline":"I always seek to develop my discipline as I believe it is the key to achieving results, and I do everything with dedication because I enjoy seeing the results of my efforts. During my master's degree, I am getting to know incredibly capable people and learning a lot from them, which has been contributing to my professional growth.",
+    "In my leisure time":"In my leisure time, I like to follow football and work out at the gym. I am also a big fan of music (my Spotify is on almost all day), and my taste is quite eclectic, I listen to almost everything.",
+    "Currently, I am living in Bragança, Portugal": "Currently, I am living in Bragança, Portugal, where I am pursuing a master's degree at the Polytechnic Institute of Bragança. The experience of living abroad has been amazing as I am meeting people from different parts of the world, which has contributed a lot to my personal growth. Moreover, I am getting the opportunity to visit incredible places in Europe, such as London, Barcelona, and Athens.",
+    "Hi! My name is Leonardo Leite, I work with software engineering":"Hi! My name is Leonardo Leite, I work with software engineering and I'm from Belo Horizonte, Minas Gerais (Brazil). Since my college days, I've been involved in entrepreneurship and was one of the founders of the Computer Engineering Junior Company at CEFET-MG. Being part of the junior company movement was a turning point in my life, both personally and professionally."
 }
