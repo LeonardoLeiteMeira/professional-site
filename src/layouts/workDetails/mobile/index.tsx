@@ -1,7 +1,7 @@
 import { ProjectTechnologies } from "@/assets/constants"
 import CustomAppBar from "@/components/customAppBar"
 import TechnologiesRow from "@/components/technologiesRow"
-import { Grid, useTheme } from "@mui/material"
+import { Box, Grid, useTheme } from "@mui/material"
 import { useTranslation } from "next-i18next"
 import { useState } from "react"
 import DetailsContent from "./detailsContent"
@@ -42,12 +42,18 @@ export default function ProjectDetailsMobile({project}:Props){
                 </CustomAppBar>
             </Grid>
 
-            <DetailsNavigation
-                currentPage={page}
-                lastPage={4}
-                handlePageDown={handlePageDown}
-                handlePageUp={handlePageUp}
-            />
+            <Box
+                position="fixed"
+                bottom={theme.spacing(3)}
+                right={theme.spacing(3)}
+            >
+                <DetailsNavigation
+                    currentPage={page}
+                    lastPage={4}
+                    handlePageDown={handlePageDown}
+                    handlePageUp={handlePageUp}
+                />
+            </Box>
         </Grid>
     )
 }
