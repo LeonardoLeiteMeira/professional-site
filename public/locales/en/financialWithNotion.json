@@ -1,7 +1,7 @@
 {
-    "project name":"name in english text",
-    "business description":"business description text",
-    "technical description":"technical description text",
-    "work methodology":"work methodology text",
-    "my learnings":"my learnings text"
+    "project name":"Financial Management App",
+    "business description":"This project originated from my need to simplify my financial management. My control spreadsheet had grown significantly, and I couldn't find other apps or systems that met my needs more efficiently than Excel. So, I started developing an application that would allow me to easily enter and view my financial information, both through the app interface and through Notion, which was used as the database. The app is still under development.",
+    "technical description":"This application is being developed using Flutter, along with MobX and clean architecture, allowing for easy module substitution if necessary. The database is being managed by Notion, through its API, and for each month, a new database is created within Notion pages. This approach avoids dealing with large databases and allows financial information to be easily visualized through the Notion interface. The application is still under development.",
+    "work methodology":"To manage this project, I created a board in Notion and listed all the features I wanted to implement. Then, I built the interface in Figma to better visualize what the final result would be, and then started development. The board was used to store information about the stage of each development, with tags and dates on each of the created cards.",
+    "my learnings":"While developing this project, I learned a lot about the complexity of managing access to dynamic data in an API like Notion and the importance of having well-defined interfaces with effective data validation to ensure consistency. In addition, managing a complex architecture in a project with only one developer (myself) can take a lot of time and slow down project development. These are certainly valuable lessons that will help me make better architectural decisions for future projects."
 }

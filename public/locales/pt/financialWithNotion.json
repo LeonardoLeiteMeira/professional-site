@@ -1,7 +1,7 @@
 {
-    "project name":"Nome do projeto",
-    "business description":"Descrição de negocio",
-    "technical description":"Descrição tecnica",
-    "work methodology":"Metodologia de trabalho",
-    "my learnings":"Meus aprendizados"
+    "project name":"App de Gestão Financeira",
+    "business description":"Este projeto teve origem na minha necessidade de simplificar a minha gestão financeira. A minha planilha de controle cresceu bastante e eu não consegui encontrar outros aplicativos ou sistemas que atendessem às minhas necessidades de forma mais eficiente do que o Excel. Então, comecei a desenvolver um aplicativo que me permitisse inserir e visualizar facilmente as minhas informações financeiras, tanto pela interface do aplicativo quanto pelo Notion, que foi utilizado como base de dados. O App ainda está em desenvolvimento.",
+    "technical description":"Este aplicativo está sendo desenvolvido utilizando o Flutter, juntamente com o MobX e a arquitetura limpa, permitindo a fácil substituição dos módulos, caso seja necessário. A base de dados está sendo gerenciada pelo Notion, por meio da sua API, e para cada mês, um novo banco de dados é criado dentro das páginas do Notion. Essa abordagem evita o gerenciamento de grandes bases de dados e permite que as informações financeiras sejam facilmente visualizadas por meio da interface do Notion. O aplicativo ainda está em desenvolvimento.",
+    "work methodology":"Para gerenciar este projeto, eu criei um board no Notion e listei todas as funcionalidades que gostaria de implementar. Em seguida, construí a interface no Figma para visualizar melhor qual seria o resultado final e, então, iniciei o desenvolvimento. O board foi utilizado para armazenar informações sobre o estágio de cada desenvolvimento, com tags e data em cada um dos cards criados.",
+    "my learnings":"Ao desenvolver este projeto, aprendi bastante sobre a complexidade de gerenciar o acesso a dados dinâmicos em uma API como a Notion e a importância de ter interfaces bem definidas, com validação efetiva de dados, para garantir a consistência. Além disso, gerenciar uma arquitetura complexa em um projeto com apenas um desenvolvedor (eu) pode levar muito tempo e retardar o desenvolvimento do projeto. Com certeza, essas são lições valiosas que me ajudarão a tomar melhores decisões arquiteturais para projetos futuros."
 }

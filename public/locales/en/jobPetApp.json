@@ -1,7 +1,7 @@
 {
-    "project name":"name in english text",
-    "business description":"business description text",
-    "technical description":"technical description text",
-    "work methodology":"work methodology text",
-    "my learnings":"my learnings text"
+    "project name":"JobPet Professional App",
+    "business description":"This project consists of an application that acts as an intermediary between professionals in the pet market and companies in need of qualified labor. The app allows users to publish a video that will be used as a resume, add information such as a photo, description, and professional experiences, as well as view job openings. The application is part of a larger system that includes a web platform where companies post job vacancies and view the profiles of professionals who have applied.",
+    "technical description":"The application was first prototyped in Figma and built in Flutter, using the MobX state management and clean architecture, allowing for easy replacement of modules in the future, if necessary. The API that provides information for the application was developed in NodeJS and underwent frequent modifications to meet the demands of the application. The chosen database was MongoDB, due to its ease of use and flexibility, which are essential in a startup environment.",
+    "work methodology":"To build the application, demands were organized on a Trello board and grouped by version. Once all demands of a version were completed, a new version was released on Google Play. Demands were raised by the startup CEO and aligned with the technical team, which consisted of three people at the time. Weekly meetings were held to test the application, discuss new features, and align short-term goals. The work methodology was similar to Kanban, which is widely used in companies around the world.",
+    "my learnings":"During the development of this project, I gained a great deal of knowledge about the startup context, working in a highly flexible environment with constant changes and many uncertainties. I learned to have more freedom to test and validate hypotheses to solve the problems that arose, as well as developing my personal organization and discipline skills, which were essential to achieve the established goals. Technically, I was able to deepen my knowledge of Flutter, as well as learning to work more efficiently with NodeJs and MongoDB, technologies that are very useful and widely used in various projects."
 }

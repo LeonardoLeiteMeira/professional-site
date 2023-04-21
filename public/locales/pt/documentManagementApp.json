@@ -1,7 +1,7 @@
 {
-    "project name":"Nome do projeto",
-    "business description":"Descrição de negocio",
-    "technical description":"Descrição tecnica",
-    "work methodology":"Metodologia de trabalho",
-    "my learnings":"Meus aprendizados"
+    "project name":"App Para Gestão de Documentos",
+    "business description":"Este projeto surgiu no contexto da criação de uma empresa júnior, onde tivemos muitas dificuldades na gestão dos documentos necessários para estruturar a empresa. Por isso, procuramos uma assessoria jurídica para nos apoiar na construção de um aplicativo que pudesse ajudar outras empresas juniores com sua documentação. O projeto inclui a descrição dos documentos necessários, checklists e exemplos preenchidos.",
+    "technical description":"O aplicativo foi construído em Flutter, com a inclusão dos documentos e modelos apresentados no próprio app. Utilizamos uma arquitetura com Flutter Bloc em uma equipe inicial de 4 pessoas. O projeto não apresentou grandes complexidades técnicas, uma vez que fornecia alguns documentos, textos descritivos e checklists. Para o banco de dados interno, optamos pelo Hive por ser simples e flexível. A principal preocupação foi com os documentos fornecidos aos usuários, que precisavam conter informações consistentes.",
+    "work methodology":"Para construir este projeto, começamos por listar as dores que estávamos tentando resolver e conversamos com outras empresas juniores na área jurídica para obter as informações necessárias para alimentar o aplicativo. Depois de esclarecer as dúvidas e levantar os requisitos do MVP, iniciamos o desenvolvimento. Utilizamos um quadro Kanban para gerenciar as atividades e documentamos o que foi feito a cada semana, ambos estruturados no Notion.",
+    "my learnings":"Durante a realização desse projeto, pude adquirir valiosos aprendizados sobre o contexto jurídico e as complexidades relacionadas à disponibilização de modelos de documentos para diferentes regiões. Além disso, a busca por conhecimentos para treinar uma equipe me levou a aprimorar tanto minhas habilidades técnicas quanto em gestão de pessoas. Foi uma experiência enriquecedora que me permitiu expandir minha compreensão em diferentes áreas e aprimorar minhas habilidades profissionais."
 }
