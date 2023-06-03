@@ -29,7 +29,7 @@ export default function Navbar(){
             </CustomLink>
 
             <CustomLink href={"/workMethodology"}>
-                <NavbarText>{t("Work Methodoly")}</NavbarText>
+                <NavbarText>{t("Work Methodology")}</NavbarText>
             </CustomLink>
 
             <CustomLink href={"/works"}>

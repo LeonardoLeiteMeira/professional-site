@@ -19,8 +19,8 @@ export default function DetailsContent({project,page}:Props){
                 title1={tc("Product/Business Description")}
                 text1={t("business description")} 
 
-                title2={tc("Work Methodoly")}
-                text2={t("work methodology")}
+                title2={tc("Work Methodology")}
+                text2={t("Work Methodology")}
             />    
     )
     const pageThreeAndFour = (

@@ -24,7 +24,7 @@ const links:Array<PageLink> = [
     link:"/works"
   },
   {
-    name:"Work Methodoly",
+    name:"Work Methodology",
     link:"/workMethodology"
   },
   {
