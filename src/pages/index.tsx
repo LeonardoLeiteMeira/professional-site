@@ -22,8 +22,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Leonardo Leite</title>
-        <meta name="description" content="Professional Site" />
+        <title>Software Engineer - Leonardo Leite</title>
+        <meta name="description" content="Solving business problems and creating solutions with technology" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#FFFFFF" />
         <link rel="icon" href="/favicon.ico" />
