@@ -32,7 +32,7 @@ const projectTechnologies:Array<ProjectTechnologies> = [
     {
         title:"Customer service system",
         name:"customerServiceSystem",
-        technologies:["React", "Node", "SQL", "AWS-S3"]
+        technologies:["Flutter", "React", "Node", "SQL", "AWS-S3"]
     },
     {
         title:"Document management App",
@@ -42,7 +42,7 @@ const projectTechnologies:Array<ProjectTechnologies> = [
     {
         title:"Data collection system",
         name:"dataCollectionSystem",
-        technologies:["React", "Flutter", "C#","SQL","Azure"]
+        technologies:["Flutter", "React", "C#","SQL","Azure"]
     },
     {
         title:"This portfolio",
