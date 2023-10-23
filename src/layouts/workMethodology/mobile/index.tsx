@@ -35,7 +35,7 @@ export default function WorkMethodologyMobile(){
         <Grid item container direction="column" xs={12} alignItems="center" gap={4} padding={theme.spacing(3)}>
             {page===3?
                 <>
-                    <FadeText textOne="" textTwo={t("How I work 3")} isTextOne={page===3} fontSize={fontSize}/>
+                    <FadeText textOne="" textTwo={t("How I work 3")+t("How I work 4")} isTextOne={page===3} fontSize={fontSize}/>
                     <FadeImage alt="test" size={imageSize} isImageOne={page===3} imageOne={Icons.Flutter} imageTwo={Icons.Cicle}/>
                 </>:
                 <Grid item container direction="column" xs={12} justifyContent={"space-around"} alignContent={"center"} alignItems={"center"} gap={4}>

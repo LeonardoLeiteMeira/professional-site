@@ -1,21 +1,10 @@
-import WorkMethodologyDesktop from "@/layouts/workMethodology/desktop";
-import WorkMethodologyMobile from "@/layouts/workMethodology/mobile";
-import { Theme, styled, useMediaQuery } from "@mui/material";
+import WorkMethodology from "@/layouts/workMethodology";
 import { GetStaticProps } from "next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
-const StyledSection = styled("section")(()=>({
-  backgroundColor:"#B5F0F0",
-  height: "100vh",
-  width: "100vw"
-}))
-
-export default function WorkMethodology(){
-    const isDesktop = useMediaQuery((theme:Theme) => theme.breakpoints.up('md'));
+export default function WorkMethodologyPage(){
     return (
-       <StyledSection>
-          {isDesktop?<WorkMethodologyDesktop/>:<WorkMethodologyMobile/>}
-       </StyledSection>  
+       <WorkMethodology/>
     )
 }
 

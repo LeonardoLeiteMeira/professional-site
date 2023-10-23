@@ -55,7 +55,7 @@ export default function WorkMethodologyDesktop(){
                     gap={1}
                 >
                     <Grid item container direction="column" xs={5} alignItems="center" gap={3}> 
-                        <FadeText textOne={t("How I work 3")} textTwo={t("How I work 1")} isTextOne={isPageOne} fontSize={fontSize}/>
+                        <FadeText textOne={t("How I work 3")+t("How I work 4")} textTwo={t("How I work 1")} isTextOne={isPageOne} fontSize={fontSize}/>
                         <FadeImage alt="test" size={imageSize} isImageOne={isPageOne} imageOne={Icons.Cicle} imageTwo={Icons.ThinkingEmoji}/>
                     </Grid>
 
