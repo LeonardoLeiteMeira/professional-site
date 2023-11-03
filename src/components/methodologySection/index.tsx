@@ -28,12 +28,15 @@ export default function MethodologySection() {
     return (
         <Container item container direction={"column"} wrap="nowrap">
             <Grid item container>
-                <Typography variant={isDesktop?"h2":"h4"} >Transforme Seu Negócio com Software Feito Sob Medida! 🚀</Typography>
+                <Typography variant={"h3"} fontWeight={"semi-bold"}>Transforme Seu Negócio com Software Feito Sob Medida! 🚀</Typography>
             </Grid>
 
             <Grid item container direction={"column"} height={"100%"} wrap="nowrap">
                 <Item item container direction={"column"} justifyContent={"center"}>
                     {/* <Typography paddingTop={"2vh"}>{t("How I work 3")}</Typography> */}
+                    <Typography fontSize={isDesktop?24:18}>
+                        Desenvolvo sistemas web e mobile sob medida para o seu negócio, com foco em resultados e experiência do usuário.
+                    </Typography>
                     <Typography fontSize={isDesktop?24:18}>
                         Quer saber como tornamos suas ideias em soluções digitais incríveis, passo a passo? Descubra nossa metodologia que coloca VOCÊ no centro do desenvolvimento.
                     </Typography>

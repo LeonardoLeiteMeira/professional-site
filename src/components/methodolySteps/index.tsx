@@ -6,10 +6,10 @@ export default function MethodologySteps(){
     return(
         <Grid container direction={"row"} width={"100%"} justifyContent={"center"}>
             <MethodologyCard title={"1.Entendimento da necessidade"}/>                
-            <MethodologyCard title={"2.Entendimento da necessidade"}/>                
-            <MethodologyCard title={"3.Entendimento da necessidade"}/>                
-            <MethodologyCard title={"4.Entendimento da necessidade"}/>                
-            <MethodologyCard title={"5.Entendimento da necessidade"}/>                 
+            <MethodologyCard title={"2.Proposta de Solução"}/>                
+            <MethodologyCard title={"3.Protótipo e testes"}/>                
+            <MethodologyCard title={"4.Desenvolvimento Ágil"}/>                
+            <MethodologyCard title={"5.Validação e Suporte"}/>                 
         </Grid>    
     );
 }
