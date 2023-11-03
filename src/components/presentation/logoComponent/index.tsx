@@ -2,14 +2,12 @@ import { styled } from "@mui/material";
 import Logo from "../../../assets/images/Logo.png"
 import Image, { ImageProps } from 'next/image'
 
-const LogoStyle = styled(Image)<ImageProps>(({theme})=>({
+const imgSize = 145
+
+const LogoStyle = styled(Image)<ImageProps>(()=>({
     borderRadius: "50%",
-    width: 200,
-    height: 200,
-    [theme.breakpoints.down("sm")]:{
-        width: 130,
-        height: 130,
-    },
+    width: imgSize,
+    height: imgSize,
 }))
 
 const LogoContainer = styled("div")(({theme})=>({
