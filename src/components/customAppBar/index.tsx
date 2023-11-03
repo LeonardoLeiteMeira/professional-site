@@ -4,7 +4,7 @@ import { useState } from "react";
 import CustomDrawer from "../customDrawer";
 
 interface Props{
-    children:React.ReactNode,
+    children?:React.ReactNode,
     title:string
 }
 
