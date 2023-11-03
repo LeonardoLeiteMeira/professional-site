@@ -8,7 +8,7 @@ import { Box, Grid, useTheme } from "@mui/material";
 import { Theme } from "@mui/system";
 
 
-export default function IndextDesktop(){
+export default function IndexDesktop(){
     const theme:Theme = useTheme()
 
     return (

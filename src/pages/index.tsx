@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { styled,useMediaQuery } from '@mui/material'
 import IndexMobile from '@/layouts/index/mobile'
-import IndextDesktop from '@/layouts/index/desktop'
+import IndexDesktop from '@/layouts/index/desktop'
 import { Theme } from '@mui/system'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { GetStaticProps } from "next";
@@ -29,7 +29,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Main>
-        {isDesktop?<IndextDesktop/>:<IndexMobile/>}
+        {isDesktop?<IndexDesktop/>:<IndexMobile/>}
       </Main>
     </>
   )
