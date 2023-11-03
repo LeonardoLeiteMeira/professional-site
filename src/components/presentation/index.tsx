@@ -1,7 +1,6 @@
-import { Grid, styled, Typography,  TypographyProps } from "@mui/material";
+import { Divider, Grid, styled, Typography,  TypographyProps } from "@mui/material";
 import LogoComponent from "./logoComponent";
 import { useTranslation } from 'next-i18next'
-import Divider from "../divider";
 
 const TypographyTitle = styled(Typography)<TypographyProps>(({ theme }) => ({
     [theme.breakpoints.up("md")]:{

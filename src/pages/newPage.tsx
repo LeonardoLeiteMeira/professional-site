@@ -4,8 +4,9 @@ import MethodologySection from "@/components/methodologySection";
 import Navbar from "@/components/navbar";
 import Presentation from "@/components/presentation";
 import ProjectList from "@/components/projectList";
-import IndextDesktop from "@/layouts/index/desktop";
+import IndexDesktop from "@/layouts/index/desktop";
 import IndexMobile from "@/layouts/index/mobile";
+import NewPresentationSection from "@/layouts/newPresentation";
 import Description from "@/layouts/works/description";
 
 import { Box, Divider, Grid, Theme, Typography, styled, useMediaQuery, useTheme } from "@mui/material";
@@ -32,18 +33,8 @@ export default function NewPage(){
                 // sx={{scrollSnapType:"y mandatory"}}
             >
                 {/* ============== */}
-                {/* {isDesktop?<IndextDesktop/>:<IndexMobile/>} */}
-                <GridItem item container flexDirection={"row"} >
-                    <Navbar/>
-                    <Grid item container flexDirection={"column"} width={"50vw"} height={"100vh"} alignItems={"center"} justifyContent="space-around">
-                        <Presentation/>
-                        <Divider/>
-                    </Grid>
-
-                    <Grid item container flexDirection={"column"} width={"50vw"} height={"70vh"} justifyContent={"center"}>
-                        <Typography variant="h2" align="center" >Entregando solucoes de software que geram resultados</Typography>
-                    </Grid>
-                </GridItem>
+                {/* {isDesktop?<IndexDesktop/>:<IndexMobile/>} */}
+                <NewPresentationSection/>
                 {/* ============== */}
                 <MethodologySection/>
                 {/* ============== */}
