@@ -16,7 +16,7 @@ interface Props{
     setIsOpen:React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export default function CustonDrawer({isOpen, setIsOpen}:Props){
+export default function CustomDrawer({isOpen, setIsOpen}:Props){
     const theme = useTheme()
 
     return (
