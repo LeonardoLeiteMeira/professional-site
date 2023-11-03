@@ -3,8 +3,7 @@ import Divider from "@/components/divider"
 import Navbar from "@/components/navbar"
 import Presentation from "@/components/presentation"
 import useHeight from "@/hooks/useHeight"
-import { Box, Grid, Theme, Typography, styled, useMediaQuery, useTheme } from "@mui/material"
-import { use, useEffect, useState } from "react"
+import { Grid, Theme, Typography, styled, useMediaQuery, useTheme } from "@mui/material"
 
 const GridContainer = styled(Grid)(()=>({
     width:"100vw",

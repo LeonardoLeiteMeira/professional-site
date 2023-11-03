@@ -1,18 +1,21 @@
-import ContactButton from "@/components/contactButton";
 import ContactList from "@/components/contactList";
 import MethodologySection from "@/components/methodologySection";
-import Navbar from "@/components/navbar";
 import Presentation from "@/components/presentation";
 import ProjectList from "@/components/projectList";
-import IndexDesktop from "@/layouts/index/desktop";
-import IndexMobile from "@/layouts/index/mobile";
 import NewPresentationSection from "@/layouts/newPresentation";
 import Description from "@/layouts/works/description";
 
-import { Box, Divider, Grid, Theme, Typography, styled, useMediaQuery, useTheme } from "@mui/material";
+import { Grid, Theme, Typography, styled, useMediaQuery, useTheme } from "@mui/material";
 import { GetStaticProps } from "next"
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+
+const Main = styled("main")`
+  overflow: hidden;
+  background: 
+        linear-gradient(to bottom right, #FFFFFF, #87E6E6);
+`;
+
 
 const Section = styled("section")(({theme})=>({
   with:"100vw",
@@ -28,12 +31,10 @@ export default function NewPage(){
     const {t} = useTranslation()
     const isDesktop = useMediaQuery((theme:Theme) => theme.breakpoints.up('md'));
     return (
-       <>
+       <Main>
             <Grid container width={"100vw"} height={"100vh"} overflow={"auto"} 
                 // sx={{scrollSnapType:"y mandatory"}}
             >
-                {/* ============== */}
-                {/* {isDesktop?<IndexDesktop/>:<IndexMobile/>} */}
                 <NewPresentationSection/>
                 {/* ============== */}
                 <MethodologySection/>
@@ -82,7 +83,7 @@ export default function NewPage(){
                     </Grid>
                 </GridItem>
             </Grid>
-       </>
+       </Main>
     )
 }
 
