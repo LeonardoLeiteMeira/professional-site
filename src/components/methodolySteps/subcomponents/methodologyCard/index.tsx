@@ -10,7 +10,6 @@ const CardStyle = styled(Grid)(({theme})=>({
 
 interface Props{
     title:string,
-
 }
 
 export default function MethodologyCard({title}:Props) {
@@ -18,8 +17,9 @@ export default function MethodologyCard({title}:Props) {
     return (
         <CardStyle 
             item container 
-            xs={12} sm={6} md={2} 
+            xs={12} sm={4} md={3} 
             justifyContent="center" alignItems="center" 
+            wrap="nowrap"
         >
             <Typography variant="subtitle2" fontSize={14}>{title}</Typography>
         </CardStyle>

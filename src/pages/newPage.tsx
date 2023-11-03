@@ -4,6 +4,8 @@ import MethodologySection from "@/components/methodologySection";
 import Navbar from "@/components/navbar";
 import Presentation from "@/components/presentation";
 import ProjectList from "@/components/projectList";
+import IndextDesktop from "@/layouts/index/desktop";
+import IndexMobile from "@/layouts/index/mobile";
 import Description from "@/layouts/works/description";
 
 import { Box, Divider, Grid, Theme, Typography, styled, useMediaQuery, useTheme } from "@mui/material";
@@ -17,9 +19,7 @@ const Section = styled("section")(({theme})=>({
 }))
 
 const GridItem = styled(Grid)(()=>({
-    scrollSnapAlign:"start",
     width:"100vw",
-    height:"100vh",
 }))
 
 export default function NewPage(){
@@ -28,8 +28,11 @@ export default function NewPage(){
     const isDesktop = useMediaQuery((theme:Theme) => theme.breakpoints.up('md'));
     return (
        <>
-            <Grid container width={"100vw"} height={"100vh"} overflow={"auto"} sx={{scrollSnapType:"y mandatory"}}>
+            <Grid container width={"100vw"} height={"100vh"} overflow={"auto"} 
+                // sx={{scrollSnapType:"y mandatory"}}
+            >
                 {/* ============== */}
+                {/* {isDesktop?<IndextDesktop/>:<IndexMobile/>} */}
                 <GridItem item container flexDirection={"row"} >
                     <Navbar/>
                     <Grid item container flexDirection={"column"} width={"50vw"} height={"100vh"} alignItems={"center"} justifyContent="space-around">
