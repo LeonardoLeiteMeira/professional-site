@@ -29,8 +29,8 @@ export default function NewPresentationSection(){
                 </Grid>
                 
                 <Divider/>
-                <Grid item container width={isDesktop?"50vw":"100vw"} maxWidth={theme.spacing(50)} justifyContent="center">
-                    <Typography variant="h2" align="center" fontSize={36}>Entregando solucoes de software que geram resultados</Typography>
+                <Grid item container width={isDesktop?"80vw":"100vw"} justifyContent="center">
+                    <Typography variant="h2" align="center" fontSize={36}>Arquitetando soluções de software que transformam desafios de negócios em oportunidades!</Typography>
                 </Grid>
             </Grid>
         </GridContainer>

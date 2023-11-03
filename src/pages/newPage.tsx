@@ -14,8 +14,8 @@ const Main = styled("main")`
   overflow: hidden;
   background: 
         linear-gradient(to bottom right, #FFFFFF, #87E6E6);
+        /* linear-gradient(to bottom right, #FFFFFF, #003366); */
 `;
-
 
 const Section = styled("section")(({theme})=>({
   with:"100vw",
