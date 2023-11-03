@@ -17,7 +17,6 @@ export default function NewPresentationSection(){
 
     return (
         <GridContainer item container flexDirection={"column"} wrap="nowrap" justifyContent="flex-start">
-            {isDesktop?<Navbar/>:<CustomAppBar children={undefined} title={"Leonardo Leite - Software Engineer"}/>}
             <Grid item container 
                 direction={"column"} 
                 width={"100vw"} 
