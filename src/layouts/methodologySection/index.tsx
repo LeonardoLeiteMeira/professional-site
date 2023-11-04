@@ -2,7 +2,7 @@ import Icons from "@/assets/icons"
 import { Grid, Theme, Typography, styled, useMediaQuery, useTheme } from "@mui/material"
 import { useTranslation } from "next-i18next"
 import Image from "next/image"
-import MethodologySteps from "../methodolySteps"
+import MethodologySteps from "../../components/methodolySteps"
 
 
 const Container = styled(Grid)(({theme})=>({
