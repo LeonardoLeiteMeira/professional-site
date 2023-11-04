@@ -1,4 +1,5 @@
 import projectTechnologies, { ProjectTechnologies } from "./projectsTechnologies"
+import colors from "./colors"
 
 type Technology =  
     "Flutter"|
@@ -33,5 +34,5 @@ const links:Array<PageLink> = [
   },
 ]
 
-export {links, projectTechnologies}
-export type { Technology, PageLink ,ProjectTechnologies}
+export {links, projectTechnologies, colors}
+export type { Technology, PageLink, ProjectTechnologies }
