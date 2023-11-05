@@ -14,11 +14,9 @@ export default function Description(){
             <BodyText variant="body2" align="justify" fontSize={18}>
                 {t("Work Experience Description1")}
             </BodyText>
-            <br/>
             <BodyText variant="body2" align="justify" fontSize={18}>
                 {t("Work Experience Description2")}
             </BodyText>
-            <br/>  
         </>
     )
 }
