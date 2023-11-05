@@ -5,13 +5,13 @@ import Description from "../works/description"
 
 const Container = styled(Grid)(()=>({
     maxWidth:"100%",
-    
 }))
 
 export default function WorkSection(){
     const theme = useTheme()
     const {t} = useTranslation()
     const isDesktop = useMediaQuery((theme:Theme)=>theme.breakpoints.up("md"))// theme.breakpoints.up("md")
+
     return (
         <Container item container direction="column">
 
@@ -31,7 +31,6 @@ export default function WorkSection(){
                     <ProjectList/>
                 </Grid>
             </Grid>
-
         </Container>
     )
 }

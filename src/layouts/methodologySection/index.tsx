@@ -29,7 +29,9 @@ export default function MethodologySection() {
     return (
         <Container item container direction={"column"} wrap="nowrap">
             <Grid item container>
-                <Typography variant={"h3"} fontWeight={"semi-bold"}>Transforme Seu Negócio com uma Solução Sob Medida!</Typography>
+                <Typography variant={"h3"} fontWeight={"semi-bold"}>
+                    Transforme Seu Negócio com uma Solução Sob Medida!
+                </Typography>
             </Grid>
 
             <Grid item container direction={"column"} height={"100%"} wrap="nowrap">
