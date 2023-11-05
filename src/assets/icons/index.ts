@@ -27,6 +27,10 @@ import presentationIPB from "./svg/presentationIPB.png"
 import campNou from "./svg/campNou.png"
 import athenas from "./svg/athenas.png"
 import commit from "./svg/commit.png"
+import bmw from "../images/BMW.png"
+import hsbc from "../images/hsbc.png"
+import revolut from "../images/revolut.png"
+import nubank from "../images/nubank.png"
 
 const Icons = {
     "Flutter":flutter,
@@ -57,7 +61,11 @@ const Icons = {
     "PresentationIPB":presentationIPB,
     "CampNou":campNou,
     "Athenas":athenas,
-    "Commit":commit
+    "Commit":commit,
+    "BMW":bmw,
+    "HSBC":hsbc,
+    "Revolut":revolut,
+    "Nubank":nubank
 }
 
 export default Icons
