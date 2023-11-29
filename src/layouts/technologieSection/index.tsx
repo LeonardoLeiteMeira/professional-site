@@ -1,6 +1,5 @@
-import Icons from "@/assets/icons";
-import { Box, Grid, Theme, Typography, styled, useMediaQuery, useTheme } from "@mui/material"
-import Image from "next/image"
+import { Grid, Theme, Typography, styled, useMediaQuery, useTheme } from "@mui/material"
+import FlutterCompanies from "./flutterCompanies";
 
 const Container = styled(Grid)(({theme})=>({
     padding:theme.spacing(3),
@@ -10,8 +9,6 @@ const Container = styled(Grid)(({theme})=>({
 export default function TechnologiesSection() {
     const isDesktop = useMediaQuery((theme:Theme) => theme.breakpoints.up('md'));
     const theme = useTheme()
-    const iconSize = 200
-    const iconSmallSize = iconSize/2
 
     return (
         <Container item container direction={"column"} width="100vw">
@@ -29,58 +26,8 @@ export default function TechnologiesSection() {
                 </Typography>
             </Grid>
 
-            <Grid item container direction="row" padding={theme.spacing(6)} justifyContent={"center"} gap={6}>
-                <Grid item container maxWidth={"40vw"} direction={"column"} alignItems="center" gap={2}>
-                    <Image 
-                        src={Icons.Flutter} 
-                        alt={"Flutter Ions"}
-                        width={iconSize} 
-                        height={iconSize}
-                    />
-                    <Typography variant={"caption"}>Flutter - Google Framework</Typography>
-                </Grid>
-                <Grid item container direction="column" width={2*iconSize}>
-                    <Grid item container direction="row" maxWidth="40vw" alignContent="center" gap={2}>
-                        <Grid item container direction={"column"} width={iconSmallSize}>
-                            <Grid item container>
-                                <Image 
-                                    src={Icons.BMW} 
-                                    alt={"BMW Icon"}
-                                    width={iconSmallSize} 
-                                    height={iconSmallSize}
-                                />
-                            </Grid>
-                            <Grid item container>
-                                <Image 
-                                    src={Icons.HSBC} 
-                                    alt={"HSBC Icon"}
-                                    width={iconSmallSize} 
-                                    height={iconSmallSize}
-                                />
-                            </Grid>
-                        </Grid>
-                        <Grid item container direction={"column"} width={iconSmallSize} gap={0}>
-                            <Grid item container>
-                                <Image 
-                                    src={Icons.Revolut} 
-                                    alt={"Revolut Icon"}
-                                    width={iconSmallSize} 
-                                    height={iconSmallSize}
-                                />
-                            </Grid>
-                            <Grid item container>
-                                <Image 
-                                    src={Icons.Nubank} 
-                                    alt={"Nubank Icon"}
-                                    width={iconSmallSize} 
-                                    height={iconSmallSize}
-                                />
-                            </Grid>
-                        </Grid>
-                    </Grid>
-                    <Typography variant={"caption"}>Algumas empresas que adotam o Flutter</Typography>
-                </Grid>
-            </Grid>
+            <FlutterCompanies/>
+           
         </Container>
 
     )
