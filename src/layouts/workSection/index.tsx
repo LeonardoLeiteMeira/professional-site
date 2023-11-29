@@ -10,24 +10,22 @@ const Container = styled(Grid)(()=>({
 export default function WorkSection(){
     const theme = useTheme()
     const {t} = useTranslation()
-    const isDesktop = useMediaQuery((theme:Theme)=>theme.breakpoints.up("md"))// theme.breakpoints.up("md")
 
     return (
-        <Container item container direction="column">
+        <Container item container xs={12}>
 
-            <Grid item container>
+            <Grid item container xs={12}>
                 <Typography variant="h4" marginLeft={theme.spacing(4)} marginRight={theme.spacing(4)} >
                     {t("Work Experience")}
                 </Typography>
             </Grid>
 
-            <Grid item container direction={isDesktop?"row":"column"}>
-                <Grid item container maxWidth={isDesktop?"50vw":"100vw"}>
-                    <Description/>
-                    <Typography>Colocar tambem sobre como a interdiciplinariade contribuiu com desenvolvimento</Typography>
+            <Grid item container xs={12}>
+                <Grid item container md={6} xs={12}>
+                    <Description/> Interdiciplinariadade
                 </Grid>
 
-                <Grid item container maxWidth={isDesktop?"50vw":"100vw"}>
+                <Grid item container md={6} xs={12}>
                     <ProjectList/>
                 </Grid>
             </Grid>

@@ -3,7 +3,6 @@ import SingleProject from "./singleProject";
 import { projectTechnologies } from "@/assets/constants";
 
 export default function ProjectList(){
-    const isDesktop = useMediaQuery((theme:Theme) => theme.breakpoints.up('md'));
     const theme = useTheme()
 
     return (
@@ -11,8 +10,6 @@ export default function ProjectList(){
             alignItems={"center"} 
             justifyContent={"center"} 
             marginBottom={theme.spacing(4)} 
-            width={isDesktop?"50vw":"100vw"}
-
             columns={2}
             direction={"row"}  
         >

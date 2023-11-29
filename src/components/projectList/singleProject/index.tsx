@@ -16,10 +16,6 @@ const TitleStyled  = styled(Grid)<GridProps>(()=>({
     height:"40%",
 }))
 
-const GridIconsStyled  = styled(Grid)<GridProps>(()=>({
-    alignContent:"center",
-    height:"60%"
-}))
 
 interface Props{
     title:string
@@ -28,18 +24,35 @@ interface Props{
 }
 
 export default function SingleProject({title, technologies, name}:Props){
-    
-    const isDesktop = useMediaQuery((theme:Theme) => theme.breakpoints.up('md'));
+    const isUpSm = useMediaQuery((theme:Theme) => theme.breakpoints.up('sm'));
+    const isUpMd = useMediaQuery((theme:Theme) => theme.breakpoints.up('md'));
     const theme = useTheme()
 
-    const xsValue = isDesktop?6:12
+    const getCardWidth = ()=>{
+        let cardWidth = ""
+        if(isUpMd){
+            cardWidth = "45vw"
+        }else if(isUpSm){
+            cardWidth = "90vw"
+        }else{
+            cardWidth = "100vw"
+        }
+        return cardWidth
+    }
+
 
     return (
-        <Grid item container xs={xsValue} direction="column" justifyContent="center" alignItems="center" width={"100%"}>
+        <Grid item container sm={6} md={6} direction="column" justifyContent="center" alignItems="center" width={"100%"}>
             <CustomLink href={`/works/${name}`}>
-                <GridStyled item container width={isDesktop?"23vw":"100vw"} margin={theme.spacing(1)}>
+                <GridStyled item container 
+                    xs={12} sm={6}
+                    justifyContent={"center"}
+                    alignContent={"center"}
+                    width={getCardWidth()}
+                    margin={theme.spacing(1)}
+                >
                     <TitleStyled item container justifyContent={"center"} marginBottom={theme.spacing(1)}>
-                        <Typography variant="subtitle2">{title}</Typography>
+                        <Typography variant="subtitle2" fontSize={12}>{title}</Typography>
                     </TitleStyled>
                     <TechnologiesRow technologies={technologies}/>
                 </GridStyled>
