@@ -1,11 +1,14 @@
+import { colors } from "@/assets/constants";
 import { Grid, Typography, styled, useTheme } from "@mui/material";
 
 const CardStyle = styled(Grid)(({theme, bgcolor})=>({
     margin:theme.spacing(1),
     padding:theme.spacing(2),
     backgroundColor:bgcolor?.toString(),
-    borderRadius:theme.spacing(1),
     color:theme.palette.primary.contrastText,
+    borderStyle:"solid",
+    borderRadius:theme.spacing(1),
+    borderColor:colors[5],
 }))
 
 interface Props{
