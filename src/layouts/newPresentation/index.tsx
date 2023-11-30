@@ -7,7 +7,7 @@ import { Grid, Theme, Typography, styled, useMediaQuery, useTheme } from "@mui/m
 
 const GridContainer = styled(Grid)(()=>({
     width:"100vw",
-    height:"100%",
+    height:"100vh",
 }))
 
 export default function NewPresentationSection(){
